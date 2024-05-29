@@ -1,7 +1,8 @@
 import React from 'react';
+import { HomeWrapper } from './styled';
 
 const Home = () => {
-  return <div>Home</div>;
+  return <HomeWrapper>Home</HomeWrapper>;
 };
 
 export default Home;
