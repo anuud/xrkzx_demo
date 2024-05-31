@@ -14,7 +14,7 @@ const HomeAboutRight: FC<IProps> = () => {
         </p>
       </div>
       <div className="btn">
-        <a href="javascript:;">查看更多</a>
+        <a>查看更多</a>
       </div>
     </HomeAboutRightWrapper>
   );

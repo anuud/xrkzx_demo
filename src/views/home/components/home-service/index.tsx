@@ -2,14 +2,43 @@ import React from 'react';
 import type { ReactNode, FC } from 'react';
 import { HomeServiceWrapper } from './styled';
 import AreaCaption from '../../../../components/area-caption';
+import { useAppSelector } from '../../../../store';
+import { shallowEqual } from 'react-redux';
 interface IProps {
   children?: ReactNode;
 }
 const HomeService: FC<IProps> = () => {
+  const { waiterlist } = useAppSelector(
+    (state) => ({
+      waiterlist: state.homelist.waiterlist
+    }),
+    shallowEqual
+  );
+
   return (
     <HomeServiceWrapper>
-      <div className="content wrap-v2">
+      <div className="content wrap ">
         <AreaCaption text="SERVICE" page="留学多对一服务流程" />
+        <div className="card">
+          {waiterlist?.map((item) => {
+            return (
+              <div className="item" key={item._id}>
+                <div className="item-list">
+                  <div className="title">- {item._id} -</div>
+                  <div className="img">
+                    <img src={item.image_url} alt="" />
+                  </div>
+                  <div className="text">
+                    <p>{item.name}</p>
+                  </div>
+                </div>
+                <div className="desc">
+                  <p>{item.text}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </HomeServiceWrapper>
   );
