@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useSelector, useDispatch, TypedUseSelectorHook } from 'react-redux';
+import Homelist from '../views/home/store/home';
 
 const store = configureStore({
-  reducer: {}
+  reducer: {
+    homelist: Homelist
+  }
 });
 
 type GetStateFnType = typeof store.getState;

@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 export const AppHeaderWrapper = styled.div`
+  /* position: fixed;
+  left: 0;
+  right: 0; */
   height: 89px;
   background-color: #fff;
   font-size: 14px;
   color: #fff;
+  z-index: 999;
   .content {
     display: flex;
     justify-content: space-between;
@@ -13,10 +17,11 @@ export const AppHeaderWrapper = styled.div`
 `;
 export const LeftWrapper = styled.div`
   display: flex;
+  margin-left: 10px;
   .logo {
     display: flex;
     width: 196px;
-    height: 70px;
+    height: 63px;
     background-image: url(${require('../../assets/images/1710834333725175.png')});
     background-size: 100% 100%;
   }
@@ -25,6 +30,7 @@ export const LeftWrapper = styled.div`
     line-height: 70px;
     font-size: 16px;
     font-weight: 500;
+    margin-left: 30px;
     .item {
       position: relative;
 
@@ -56,5 +62,29 @@ export const LeftWrapper = styled.div`
         transform: translate(-50%, 0);
       }
     }
+  }
+`;
+export const RightWrapper = styled.div`
+  display: flex;
+  width: 366px;
+  align-items: center;
+  color: #787878;
+  font-size: 12px;
+  justify-content: space-between;
+
+  > .search {
+    width: 158px;
+    height: 32px;
+    border-radius: 16px;
+
+    input {
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .ipone {
+    cursor: pointer;
   }
 `;

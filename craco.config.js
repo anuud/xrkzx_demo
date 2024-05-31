@@ -14,18 +14,16 @@ module.exports = {
     }
   ],
 
-  webpack: {
-    devServer: {
-      proxy: {
-        '/api': 'http://localhost:3001',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': ''
-        }
+  devServer: {
+    proxy: {
+      '/api': 'http://localhost:3003',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': ''
       }
-    },
-    alias: {
-      '@': path.resolve(__dirname, 'src')
     }
+  },
+  alias: {
+    '@': path.resolve(__dirname, 'src')
   }
 };

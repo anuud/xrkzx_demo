@@ -1,8 +1,10 @@
 import React from 'react';
 import type { ReactNode, FC } from 'react';
 import headerTitles from '../../assets/data/header_titles.json';
-import { AppHeaderWrapper, LeftWrapper } from './styled';
+import { AppHeaderWrapper, LeftWrapper, RightWrapper } from './styled';
 import { NavLink } from 'react-router-dom';
+import { Input } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 interface IProps {
   children?: ReactNode;
 }
@@ -44,7 +46,10 @@ const AppHeader: FC<IProps> = () => {
             })}
           </div>
         </LeftWrapper>
-        <div className="right">3</div>
+        <RightWrapper>
+          <Input className="search" placeholder="课程" prefix={<SearchOutlined />} />
+          <span className="ipone">TEL:181-8861-8942</span>
+        </RightWrapper>
       </div>
     </AppHeaderWrapper>
   );
