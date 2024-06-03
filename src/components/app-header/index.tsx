@@ -33,7 +33,7 @@ const AppHeader: FC<IProps> = () => {
 
   return (
     <AppHeaderWrapper>
-      <div className="content wrap-v1">
+      <div className="content wrap-v1 ">
         <LeftWrapper className="main">
           <a className="logo" href="/"></a>
           <div className="title-list">

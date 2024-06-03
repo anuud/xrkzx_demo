@@ -24,6 +24,7 @@ export const HomeServiceWrapper = styled.div`
       border: solid 1px rgba(255, 255, 255, 0.3);
       margin: 5px 5px;
       position: relative;
+
       .item-list {
         position: absolute;
         width: 100%;
@@ -45,9 +46,12 @@ export const HomeServiceWrapper = styled.div`
     .item:hover .desc {
       display: block;
       padding: 20px;
-      height: 160px;
+      height: 198px;
       line-height: 20px;
       background-color: #d18925;
+      border: 1px solid #f3f3f3;
+      transition: all 0.5s;
+      /* opacity: 0; */
     }
   }
 `;

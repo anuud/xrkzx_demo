@@ -40,7 +40,7 @@ const HomeAbouut: FC<IProps> = () => {
   handleimgchange();
   return (
     <HomeAboutWrapper>
-      <div className="left">
+      <div className="left container">
         {aboutimagelist?.map((item, index) => {
           return (
             <div key={item.img_id} className="item" onClick={() => handleAfterChange(index)}>

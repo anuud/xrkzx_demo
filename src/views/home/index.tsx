@@ -7,6 +7,8 @@ import AreaCaption from '../../components/area-caption';
 import HomeAbouut from './components/home-about';
 import HomeAboutRight from './components/home-about-right';
 import HomeService from './components/home-service';
+import HomeSchool from './components/home-school';
+import HomeRecommend from './components/home-recommend';
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -28,6 +30,8 @@ const Home = () => {
         </div>
       </div>
       <HomeService />
+      <HomeSchool />
+      <HomeRecommend />
     </HomeWrapper>
   );
 };

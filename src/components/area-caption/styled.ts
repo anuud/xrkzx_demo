@@ -13,14 +13,16 @@ export const AreaCaptionWrapper = styled.div`
       justify-content: space-between;
       font-size: 20px;
       .btn {
-        font-size: 18px;
+        height: 28px;
+        font-size: 14px;
         display: block;
-        width: 100px;
+        width: 85px;
         text-align: center;
         border-radius: 36px;
         background-color: #156240;
         color: #fff;
         padding: 3px 0;
+        line-height: 24px;
       }
     }
   }
