@@ -1,10 +1,8 @@
 import React from 'react';
 import type { ReactNode, FC } from 'react';
 import headerTitles from '../../assets/data/header_titles.json';
-import { AppHeaderWrapper, LeftWrapper, RightWrapper } from './styled';
+import { AppHeaderWrapper, MainWrapper } from './styled';
 import { NavLink } from 'react-router-dom';
-import { Input } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
 interface IProps {
   children?: ReactNode;
 }
@@ -33,9 +31,17 @@ const AppHeader: FC<IProps> = () => {
 
   return (
     <AppHeaderWrapper>
-      <div className="content wrap-v1 ">
-        <LeftWrapper className="main">
-          <a className="logo" href="/"></a>
+      <div className="w-4/5 m-auto flex justify-between pt-2">
+        <div>
+          <a href="#">
+            <img
+              src={require('../../assets/images/1710834333725175.png')}
+              alt=""
+              className="w-40 mt-2"
+            />
+          </a>
+        </div>
+        <MainWrapper className="main">
           <div className="title-list">
             {headerTitles.map((item) => {
               return (
@@ -45,11 +51,11 @@ const AppHeader: FC<IProps> = () => {
               );
             })}
           </div>
-        </LeftWrapper>
-        <RightWrapper>
-          <Input className="search" placeholder="课程" prefix={<SearchOutlined />} />
-          <span className="ipone">TEL:181-8861-8942</span>
-        </RightWrapper>
+        </MainWrapper>
+        <div className="head-tel">
+          <p>181-8861-8942</p>
+          <p className="text">好教育就选向日葵择校</p>
+        </div>
       </div>
     </AppHeaderWrapper>
   );

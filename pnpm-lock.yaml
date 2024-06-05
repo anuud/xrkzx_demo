@@ -41,6 +41,9 @@ importers:
       axios:
         specifier: ^1.7.2
         version: 1.7.2
+      classnames:
+        specifier: ^2.5.1
+        version: 2.5.1
       craco-less:
         specifier: ^3.0.1
         version: 3.0.1(@craco/craco@7.1.0(@types/node@16.18.97)(postcss@8.4.38)(react-scripts@5.0.1(@babel/plugin-syntax-flow@7.24.6(@babel/core@7.24.6))(@babel/plugin-transform-react-jsx@7.24.6(@babel/core@7.24.6))(@types/babel__core@7.20.5)(eslint@8.57.0)(react@18.3.1)(ts-node@10.9.2(@types/node@16.18.97)(typescript@4.9.5))(type-fest@0.21.3)(typescript@4.9.5))(typescript@4.9.5))(react-scripts@5.0.1(@babel/plugin-syntax-flow@7.24.6(@babel/core@7.24.6))(@babel/plugin-transform-react-jsx@7.24.6(@babel/core@7.24.6))(@types/babel__core@7.20.5)(eslint@8.57.0)(react@18.3.1)(ts-node@10.9.2(@types/node@16.18.97)(typescript@4.9.5))(type-fest@0.21.3)(typescript@4.9.5))(webpack@5.91.0)

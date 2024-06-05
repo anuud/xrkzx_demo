@@ -9,35 +9,45 @@ export const AppHeaderWrapper = styled.div`
   font-size: 14px;
   color: #fff;
   z-index: 999;
+  .head-tel {
+    padding-left: 35px;
+    background: url(${require('../../assets/images/phone.png')}) no-repeat left center;
+    > p {
+      color: #c69245;
+      text-align: center;
+      line-height: 7px;
+      font-size: 18px;
+      padding-top: 22px;
+    }
+    > .text {
+      font-size: 14px;
+      width: 140px;
+    }
+  }
   .content {
     display: flex;
     justify-content: space-between;
     padding-top: 7px;
   }
 `;
-export const LeftWrapper = styled.div`
+export const MainWrapper = styled.div`
   display: flex;
-  margin-left: 10px;
-  .logo {
-    display: flex;
-    width: 196px;
-    height: 63px;
-    background-image: url(${require('../../assets/images/1710834333725175.png')});
-    background-size: 100% 100%;
-  }
   .title-list {
     display: flex;
     line-height: 70px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     margin-left: 30px;
+    padding: 5pxs;
     .item {
       position: relative;
+      padding: 2px;
 
       a {
         display: block;
         padding: 0 20px;
         color: #333;
+        font-size: 19px;
       }
 
       :last-of-type a {
@@ -47,9 +57,9 @@ export const LeftWrapper = styled.div`
       &:hover a,
       .active {
         color: #156240;
-        background: #e4feed;
+        /* background: #e4feed; */
         text-decoration: none;
-        border-bottom: 1px solid #156240;
+        border-bottom: 2px solid #156240;
       }
 
       .active .icon {
@@ -62,29 +72,5 @@ export const LeftWrapper = styled.div`
         transform: translate(-50%, 0);
       }
     }
-  }
-`;
-export const RightWrapper = styled.div`
-  display: flex;
-  width: 366px;
-  align-items: center;
-  color: #787878;
-  font-size: 12px;
-  justify-content: space-between;
-
-  > .search {
-    width: 158px;
-    height: 32px;
-    border-radius: 16px;
-
-    input {
-      &::placeholder {
-        font-size: 12px;
-      }
-    }
-  }
-
-  .ipone {
-    cursor: pointer;
   }
 `;

@@ -31,7 +31,7 @@ const TopBanner: FC<IProps> = () => {
 
   return (
     <TopBannerWrapper>
-      <div className="banner wrap-v2">
+      <div className="w-4/5 m-auto">
         <BannerLeft>
           <Carousel
             autoplay

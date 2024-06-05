@@ -10,7 +10,7 @@
     "link": "/school"
   },
   {
-    "title": "择校规划全攻略",
+    "title": "快速择校",
     "type": "path",
     "link": "/strategy"
   },
@@ -18,10 +18,5 @@
     "title": "关于我们",
     "type": "path",
     "link": "about"
-  },
-  {
-    "title": "在线留言",
-    "type": "path",
-    "link": "message"
   }
 ]

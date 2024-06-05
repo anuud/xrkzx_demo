@@ -25,7 +25,7 @@ const HomeService: FC<IProps> = () => {
               <div className="item" key={item._id}>
                 <div className="item-list">
                   <div className="title">- {item._id} -</div>
-                  <div className="img">
+                  <div className="img ">
                     <img src={item.image_url} alt="" />
                   </div>
                   <div className="text">

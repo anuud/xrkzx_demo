@@ -9,13 +9,14 @@ export const TopBannerWrapper = styled.div`
 `;
 export const BannerLeft = styled.div`
   position: relative;
-  width: 980px;
+  width: 100%;
 
   .banner-item {
     overflow: hidden;
-    height: 415px;
+    height: 455px;
     .image {
       width: 100%;
+      height: 100%;
     }
   }
 
