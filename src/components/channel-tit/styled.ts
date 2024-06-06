@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ChannelTitWrapper = styled.div`
   .channel {
     border-bottom: 2px solid #ddd;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     color: #0e6ba5;
     > h2 {
       height: 56px;

@@ -127,7 +127,7 @@ const journalism = [
 const NewsGather: FC<IProps> = () => {
   return (
     <NewsGatherWrapper>
-      <div className="w-4/5 m-auto mt-5 flex h-full">
+      <div className="w-4/5 m-auto mt-5 flex">
         <div className="w-2/3 p-2 bg-white  ">
           <div className="flex justify-between daily-rec-tit">
             <div className="daily-rec-img mt-2"></div>

@@ -5,7 +5,7 @@ import { fetchRecommendDataAction } from './store/home';
 import TopBanner from './components/top-banner';
 import HomeService from './components/home-service';
 import NewsGather from './components/news-gather';
-import ChannelTit from '../../components/channel-tit';
+import HomeChannelCard from './components/home-channel-card';
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -16,8 +16,8 @@ const Home = () => {
     <HomeWrapper>
       <TopBanner />
       <NewsGather />
+      <HomeChannelCard />
       <HomeService />
-      <ChannelTit text="全国分站" subtitle="Other websites" />
     </HomeWrapper>
   );
 };

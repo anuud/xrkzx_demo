@@ -38,7 +38,7 @@ const HomeTabs: FC<IProps> = (props) => {
           })}
       </div>
       <div>
-        {currentTab?.newgatherlist?.length === 0 && 'load'}
+        {currentTab?.newgatherlist?.length === 0 && 'loadding'}
         {currentTab?.newgatherlist?.map((item: any) => {
           return (
             <div key={item._id}>
