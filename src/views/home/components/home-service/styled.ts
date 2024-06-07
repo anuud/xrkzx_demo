@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 
 export const HomeServiceWrapper = styled.div`
-  background-image: url(${require('../../../../assets/images/index7.jpg')});
   padding-top: 10px;
-  margin-top: 30px;
+  margin-top: 20px;
 
   .wrap {
-    width: 1030px;
-    margin: 0 auto;
-    padding-bottom: 35px;
+    background-image: url(${require('../../../../assets/images/index7.jpg')});
   }
   .card {
     display: flex;

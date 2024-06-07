@@ -49,7 +49,7 @@ export const ZxItemWrapper = styled.div`
   justify-content: space-around;
   > div {
     width: 33.33%;
-    height: 158px;
+    height: 145px;
     position: relative;
     border-radius: 30px;
   }
@@ -72,8 +72,8 @@ export const ZxItemWrapper = styled.div`
     }
     > ul {
       width: 80%;
-      margin: 1px 13%;
-      margin-top: 39px;
+      margin: 1px 14%;
+      margin-top: 23px;
       li {
         width: 100%;
         height: 35px;
@@ -113,8 +113,8 @@ export const ZxItemWrapper = styled.div`
     }
     > ul {
       width: 80%;
-      margin: 1px 13%;
-      margin-top: 39px;
+      margin: 1px 14%;
+      margin-top: 23px;
       li {
         width: 100%;
         height: 35px;
@@ -130,7 +130,7 @@ export const ZxItemWrapper = styled.div`
           height: 12px;
           left: 0;
           top: 12px;
-          background: url(${require('../../../../assets/images/squ2.png')}) 0 0 no-repeat;
+          background: url(${require('../../../../assets/images/squ1.png')}) 0 0 no-repeat;
         }
       }
     }
@@ -154,8 +154,8 @@ export const ZxItemWrapper = styled.div`
     }
     > ul {
       width: 80%;
-      margin: 1px 13%;
-      margin-top: 39px;
+      margin: 1px 14%;
+      margin-top: 23px;
       li {
         width: 100%;
         height: 35px;
@@ -171,7 +171,7 @@ export const ZxItemWrapper = styled.div`
           height: 12px;
           left: 0;
           top: 12px;
-          background: url(${require('../../../../assets/images/squ3.png')}) 0 0 no-repeat;
+          background: url(${require('../../../../assets/images/squ1.png')}) 0 0 no-repeat;
         }
       }
     }

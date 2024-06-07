@@ -13,7 +13,7 @@ export const BannerStrategyWrapper = styled.div`
     .wrapper1list {
       position: absolute;
       top: 156px;
-      left: 177px;
+      left: 260px;
       width: 111px;
       height: 56px;
       border: 1px solid #fff;
@@ -27,7 +27,7 @@ export const BannerStrategyWrapper = styled.div`
     .wrapper2list {
       position: absolute;
       top: 156px;
-      left: 334px;
+      left: 448px;
       width: 111px;
       height: 56px;
       border: 1px solid #fff;
@@ -41,7 +41,7 @@ export const BannerStrategyWrapper = styled.div`
     .wrapper3list {
       position: absolute;
       top: 156px;
-      left: 471px;
+      left: 615px;
       width: 111px;
       height: 56px;
       border: 1px solid #fff;

@@ -29,6 +29,9 @@ export const CaptionWrapper = styled.div`
       top: 8px;
       background: url(${require('../../../../assets/images/arr_r.png')}) 0 0 no-repeat;
     }
+    > span {
+      color: #249ffd;
+    }
   }
   .start-subtitle {
     background-image: url(${require('../../../../assets/images/ban1_text1.png')});

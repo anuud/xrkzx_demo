@@ -17,8 +17,10 @@ const HomeService: FC<IProps> = () => {
 
   return (
     <HomeServiceWrapper>
-      <div className="content wrap ">
+      <div className="w-4/5 m-auto wrap pt-2">
         <AreaCaption text="SERVICE" page="留学多对一服务流程" />
+      </div>
+      <div className="w-4/5 m-auto wrap pt-2 pb-5 mb-5">
         <div className="card">
           {waiterlist?.map((item) => {
             return (

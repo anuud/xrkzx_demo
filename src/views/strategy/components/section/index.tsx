@@ -1,13 +1,13 @@
 import React from 'react';
 import type { ReactNode, FC } from 'react';
-import { SectionText, SubTitle, ZxBtn, ZxItemWrapper } from './styled';
+import { ZxBtn, ZxItemWrapper } from './styled';
 import Caption from '../caption';
 interface IProps {
   children?: ReactNode;
 }
 const SectionStrategy: FC<IProps> = () => {
   return (
-    <div className="mt-5 w-[80%] m-auto mb-5">
+    <div className="mt-5 w-[70%] m-auto mb-5">
       <Caption title="深圳百所私立国际学校如何选择？" subtitle="择校前是不是这些问题让您头疼？" />
       <ZxItemWrapper>
         <div className="first1_sec mt-10 m-1">
