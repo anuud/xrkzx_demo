@@ -2,6 +2,8 @@ import React from 'react';
 import type { ReactNode, FC } from 'react';
 import { SerViceWrapper } from './styled';
 import Caption from '../caption';
+import { Input, Space } from 'antd';
+import { PhoneOutlined, UserOutlined } from '@ant-design/icons';
 interface IProps {
   children?: ReactNode;
 }
@@ -53,7 +55,28 @@ const SerVce: FC<IProps> = () => {
             </p>
           </div>
         </div>
-        <div className="w-[60%] ml-[20%] mt-[35%] h-[174px] item"></div>
+        <div className="w-[60%] ml-[20%] mt-[27%] h-[174px] item">
+          <div className="w-[394px] f-item">
+            <h1 className="text">免费领取</h1>
+            <div className="w-[60%] m-auto">
+              <Space>
+                <Input
+                  size="small"
+                  placeholder="请输入姓名"
+                  style={{ width: '120px' }}
+                  prefix={<UserOutlined style={{ color: '#FC5D16' }} />}
+                />
+                <Input
+                  size="small"
+                  placeholder="请输入电话"
+                  style={{ width: '120px' }}
+                  prefix={<PhoneOutlined style={{ color: '#FC5D16' }} />}
+                />
+              </Space>
+              <span className="submit">提交领取</span>
+            </div>
+          </div>
+        </div>
       </div>
     </SerViceWrapper>
   );

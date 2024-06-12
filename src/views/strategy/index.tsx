@@ -8,6 +8,9 @@ import ClassFy from './components/classify';
 import Atlas from './components/atlas';
 import Course from './components/course';
 import SerVce from './components/servce';
+import TheCher from './components/thecher';
+import SchoolStrategy from './components/school';
+import MediaStrategy from './components/media';
 interface IProps {
   children?: ReactNode;
 }
@@ -22,6 +25,9 @@ const Strategy: FC<IProps> = () => {
         <ClassFy />
         <Course />
         <SerVce />
+        <TheCher />
+        <SchoolStrategy />
+        <MediaStrategy />
       </div>
     </StrategyWrapper>
   );

@@ -14,7 +14,9 @@ const Caption: FC<IProps> = (props) => {
         {props.title}
         {props.isSub && <span>{props?.isSub}</span>}
       </div>
-      {props.subtitle && <h4 className="start-subtitle">{props.subtitle}</h4>}
+      <div className="flex justify-center">
+        {props.subtitle && <h4 className="start-subtitle">{props.subtitle}</h4>}
+      </div>
     </CaptionWrapper>
   );
 };

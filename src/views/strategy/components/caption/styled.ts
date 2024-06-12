@@ -35,17 +35,17 @@ export const CaptionWrapper = styled.div`
   }
   .start-subtitle {
     background-image: url(${require('../../../../assets/images/ban1_text1.png')});
-    width: 362px;
+    /* width: 362px; */
+    display: inline-block;
     height: 41px;
     line-height: 41px;
     margin: 18px 0;
     color: #0090fe;
-    font-size: 18px;
+    font-size: 16px;
     background: #d5f0ff;
     border-radius: 20px;
     font-weight: normal;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 10px;
+    padding: 0 18px;
   }
 `;

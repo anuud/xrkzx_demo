@@ -69,19 +69,7 @@ const TabbelStrategy: FC<IProps> = () => {
             );
           })}
       </div>
-      <Table pagination={false} columns={columns} dataSource={currentTab?.list}>
-        {/* {currentTab?.newgatherlist?.length === 0 && 'loadding'}
-        {currentTab?.newgatherlist?.map((item: any) => {
-          return (
-            <div key={item._id}>
-              <div className="flex h-9 mt-2 info">
-                <em className="hotnews-icon1 mt-1">{item._id}</em>
-                <span className="text-xs leading-9 truncate">{item.list}</span>
-              </div>
-            </div>
-          );
-        })} */}
-      </Table>
+      <Table pagination={false} columns={columns} dataSource={currentTab?.list}></Table>
     </TabbelWrapper>
   );
 };

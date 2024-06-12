@@ -1,6 +1,17 @@
 import styled from 'styled-components';
 
 export const SerViceWrapper = styled.div`
+  @keyframes ballon7 {
+    0% {
+      transform: translateY(-3px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-3px);
+    }
+  }
   position: relative;
   background-image: url(${require('../../../../assets/images/banner2.jpg')});
   background-size: 100% 100%;
@@ -43,5 +54,38 @@ export const SerViceWrapper = styled.div`
   .item {
     background-image: url(${require('../../../../assets/images/strategy/lingqu_bg.png')});
     background-size: 100% 100%;
+    position: relative;
+  }
+  .f-item {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    h1 {
+      line-height: 30px;
+      font-weight: 700;
+    }
+    .text {
+      font-size: 16px;
+      text-align: center;
+      color: white;
+    }
+    .submit {
+      display: inline-block;
+      width: 100px;
+      height: 32px;
+      margin: 0 auto;
+      position: absolute;
+      right: 36%;
+      bottom: -39px;
+      text-align: center;
+      line-height: 32px;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(to right, #ff4800, #f87128);
+      border-radius: 80px;
+      box-shadow: 0 5px 0 #e4440c;
+      cursor: pointer;
+      animation: ballon7 1s linear infinite;
+    }
   }
 `;
