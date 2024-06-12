@@ -1,16 +1,16 @@
-import React, { Suspense } from 'react';
-import AppHeader from './components/app-header';
-import { useRoutes } from 'react-router-dom';
-import routes from './router';
+import React from 'react';
 import AppFooter from './components/app-footer';
+import { Layout } from 'antd';
+import HeaderLayout from './layouts/header';
+import MainLayout from './layouts/main';
 function App() {
   return (
     <div className="App">
-      <AppHeader />
-      <Suspense fallback="">
-        <div className="main">{useRoutes(routes)}</div>
-      </Suspense>
-      <AppFooter />
+      <Layout>
+        <HeaderLayout />
+        <MainLayout />
+        <AppFooter />
+      </Layout>
     </div>
   );
 }

@@ -3,9 +3,10 @@ import { HomeWrapper } from './styled';
 import { useAppDispatch } from '../../store';
 import { fetchRecommendDataAction } from './store/home';
 import TopBanner from './components/top-banner';
-import HomeService from './components/home-service';
-import NewsGather from './components/news-gather';
-import HomeChannelCard from './components/home-channel-card';
+// import HomeService from './components/home-service';
+// import NewsGather from './components/news-gather';
+// import HomeChannelCard from './components/home-channel-card';
+import HomeCrad1 from './components/home-crad-1';
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -15,9 +16,10 @@ const Home = () => {
   return (
     <HomeWrapper>
       <TopBanner />
-      <NewsGather />
+      <HomeCrad1 />
+      {/* <NewsGather />
       <HomeChannelCard />
-      <HomeService />
+      <HomeService /> */}
     </HomeWrapper>
   );
 };

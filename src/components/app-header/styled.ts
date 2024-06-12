@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
 export const AppHeaderWrapper = styled.div`
-  /* position: fixed;
-  left: 0;
-  right: 0; */
+  width: 100%;
   height: 89px;
-  background-color: #fff;
+  background-color: rgba(245, 245, 245, 0.6);
   font-size: 14px;
   color: #fff;
   z-index: 999;

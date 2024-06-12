@@ -31,11 +31,10 @@ const TopBanner: FC<IProps> = () => {
 
   return (
     <TopBannerWrapper>
-      <div className="w-4/5 m-auto">
+      <div className="w-3/5 m-auto">
         <BannerLeft>
           <Carousel
             autoplay
-            dots={false}
             autoplaySpeed={3000}
             effect="fade"
             ref={bannerRef}
