@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const AppHeaderWrapper = styled.div`
   width: 100%;
   height: 89px;
-  background-color: rgba(245, 245, 245, 0.6);
+  background-color: white;
   font-size: 14px;
   color: #fff;
   z-index: 999;

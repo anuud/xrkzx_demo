@@ -3,13 +3,18 @@ import AppFooter from './components/app-footer';
 import { Layout } from 'antd';
 import HeaderLayout from './layouts/header';
 import MainLayout from './layouts/main';
+import { useLocation } from 'react-router-dom';
 function App() {
+  const location = useLocation();
+  console.log(location.pathname);
+
   return (
     <div className="App">
       <Layout>
-        <HeaderLayout />
+        {location.pathname == '/signup' ? '' : <HeaderLayout />}
+        {/* <HeaderLayout /> */}
         <MainLayout />
-        <AppFooter />
+        {location.pathname == '/signup' ? '' : <AppFooter />}
       </Layout>
     </div>
   );

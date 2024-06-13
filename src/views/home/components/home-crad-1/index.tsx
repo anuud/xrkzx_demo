@@ -4,7 +4,7 @@ import { HomeCrad1Wrapper } from './styled';
 import { HomeCard1, HomeShool } from '../../../../assets/data/home-crad1';
 import SectionsTabs from '../../../../components/section-tabs';
 import { Tag } from 'antd';
-import { FolderOpenOutlined, MessageOutlined } from '@ant-design/icons';
+import { FolderOpenOutlined, MessageOutlined, RightOutlined } from '@ant-design/icons';
 interface IProps {
   children?: ReactNode;
 }
@@ -20,7 +20,7 @@ const HomeCrad1: FC<IProps> = () => {
   return (
     <HomeCrad1Wrapper>
       <div className="w-3/5 m-auto mt-7 bg-white">
-        <div className="flex justify-between">
+        <div className="flex justify-between ">
           {HomeCard1?.map((item) => {
             return (
               <div className="mb-4 text-center" key={item._id}>
@@ -68,12 +68,12 @@ const HomeCrad1: FC<IProps> = () => {
             <span>学生社团 | 升学毕业</span>
           </div>
         </div>
-        <div className="w-[80%] m-auto home-help">
+        <div className="w-[100%] m-auto home-help">
           <span className="absolute left-[40%] text-white font-bold text-xl bottom-[22%]">
             立即帮我找学校
           </span>
         </div>
-        <div className="w-[80%] m-auto">
+        <div className="w-[100%] m-auto">
           <SectionsTabs tabNames={HomeShool} tabClick={tabClickHandle} />
           <div className="w-[100%] ">
             {name?.map((item) => {
@@ -133,7 +133,7 @@ const HomeCrad1: FC<IProps> = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="flex h-[186px] pb-5 cread-footer mb-4">
+                  <div className="flex h-[186px] pb-5 cread-footer">
                     {item.image_url.map((item: any) => {
                       return (
                         <img
@@ -150,8 +150,11 @@ const HomeCrad1: FC<IProps> = () => {
             })}
           </div>
         </div>
-        <div className="text-center">
-          <span>更多学校了解》</span>
+        <div className="text-center mt-1">
+          <span className="p-1 bg-slate-100">
+            更多学校了解
+            <RightOutlined />
+          </span>
         </div>
       </div>
     </HomeCrad1Wrapper>

@@ -5,6 +5,8 @@ const School = React.lazy(() => import('../views/school'));
 const Strategy = React.lazy(() => import('../views/strategy'));
 const About = React.lazy(() => import('../views/about'));
 const Message = React.lazy(() => import('../views/message'));
+const SunFlower = React.lazy(() => import('../views/sunflower'));
+const Signup = React.lazy(() => import('../views/signup'));
 
 const routes: RouteObject[] = [
   {
@@ -30,6 +32,14 @@ const routes: RouteObject[] = [
   {
     path: 'message',
     element: <Message />
+  },
+  {
+    path: 'sunflower',
+    element: <SunFlower />
+  },
+  {
+    path: 'signup',
+    element: <Signup />
   }
 ];
 

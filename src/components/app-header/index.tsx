@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import type { ReactNode, FC } from 'react';
 import headerTitles from '../../assets/data/header_titles.json';
 import { AppHeaderWrapper, MainWrapper } from './styled';
@@ -7,6 +7,10 @@ interface IProps {
   children?: ReactNode;
 }
 const AppHeader: FC<IProps> = () => {
+  const domRef = useRef(null);
+  useEffect(() => {
+    console.log(domRef.current);
+  }, []);
   function showItem(item: any) {
     if (item.type === 'path') {
       return (
@@ -31,6 +35,13 @@ const AppHeader: FC<IProps> = () => {
 
   return (
     <AppHeaderWrapper>
+      {/* <div className="w-[65%] m-auto" ref={domRef}>
+        <img
+          src={require('../../assets/images/home/20240612210830.png')}
+          alt=""
+          style={{ width: '1000px', height: '100px' }}
+        />
+      </div> */}
       <div className="w-4/5 m-auto flex justify-between pt-2">
         <div>
           <a href="#">
