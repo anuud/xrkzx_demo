@@ -1,29 +1,48 @@
-import React from 'react';
-import type { ReactNode, FC } from 'react';
+import React, { useRef, useState } from 'react';
+import type { ReactNode, FC, ElementRef } from 'react';
 import { SchoolWrapper } from './styled';
-import { Button, Input } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
+import SubTitle from './components/subTabs';
+import { strategy_school } from '../../assets/data/strategy_school';
+import SubSchool from './components/subschool';
+import { bannerlist } from '../../assets/data/bannerList';
+import { Carousel } from 'antd';
 interface IProps {
   children?: ReactNode;
 }
 const School: FC<IProps> = () => {
+  const [schoolInfo, setSchoolInfo] = useState(strategy_school[0].list);
+  const [, setCurrentIndex] = useState(0);
+  const bannerRef = useRef<ElementRef<typeof Carousel>>(null);
+
+  function handleAfterChange(current: number) {
+    setCurrentIndex(current);
+  }
+  const tabClick = (name: string) => {
+    const info = strategy_school.filter((item) => item.name === name);
+    setSchoolInfo(info[0].list);
+  };
   return (
     <SchoolWrapper>
       <div className="school-top">
-        <div className="school_search">
-          <h5>INTERNATIONAL SCHOOL</h5>
-          <h4>国际学校</h4>
-          <div className="mt-7">
-            <Input placeholder="请输入您想查询的学校名称" style={{ width: '280px' }} size="large" />
-            <Button
-              type="dashed"
-              shape="circle"
-              size="large"
-              style={{ backgroundColor: '#156240 ', marginLeft: '20px' }}
-              icon={<SearchOutlined />}
-            />
-          </div>
-        </div>
+        <Carousel
+          autoplay
+          autoplaySpeed={2000}
+          effect="fade"
+          ref={bannerRef}
+          afterChange={handleAfterChange}
+        >
+          {bannerlist?.map((item) => {
+            return (
+              <div className="banner-item h-full" key={item._id}>
+                <img className="image" src={item.url} style={{ height: '559px', width: '100%' }} />
+              </div>
+            );
+          })}
+        </Carousel>
+      </div>
+      <div className="my-2">
+        <SubTitle name="南山区国际学校" tabClick={tabClick} />
+        <SubSchool schoolInfo={schoolInfo} />
       </div>
     </SchoolWrapper>
   );

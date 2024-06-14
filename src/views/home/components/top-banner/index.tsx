@@ -26,7 +26,7 @@ const TopBanner: FC<IProps> = () => {
 
   return (
     <TopBannerWrapper>
-      <div className="w-3/5 m-auto">
+      <div className="w-[100%] m-auto">
         <BannerLeft>
           <Carousel
             autoplay

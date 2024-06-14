@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const HomeCrad1Wrapper = styled.div`
+  width: 1200px;
+  margin: auto;
   .crad-left {
     height: 300px;
     background-image: url(${require('../../../../assets/images/home/515f1c13cdda03c8a29b1031397deadb18787883.png')});
@@ -11,7 +13,7 @@ export const HomeCrad1Wrapper = styled.div`
   }
   .home-help {
     position: relative;
-    height: 400px;
+    /* height: 500px; */
     margin-top: 50px;
     background-image: url(${require('../../../../assets/images/home/school_help.png')});
     background-size: 100% 100%;

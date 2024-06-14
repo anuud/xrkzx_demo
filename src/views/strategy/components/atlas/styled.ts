@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const AtlasWrapper = styled.div`
   width: 100%;
-  height: 1000px;
+  height: 125vh;
   background: #e4f7ff;
   box-sizing: border-box;
   padding-top: 2px;
@@ -140,7 +140,7 @@ export const AtlasWrapper = styled.div`
       border: 7px solid #eeefef;
       box-sizing: border-box;
       padding: 0 10px;
-      top: 450px;
+      top: 498px;
       left: 77%;
       padding-bottom: 10px;
       > span {
@@ -164,7 +164,7 @@ export const AtlasWrapper = styled.div`
       border: 7px solid #eeefef;
       box-sizing: border-box;
       padding: 0 10px;
-      top: 600px;
+      top: 742px;
       left: 53%;
       padding-bottom: 10px;
       > span {
@@ -188,7 +188,7 @@ export const AtlasWrapper = styled.div`
       border: 7px solid #eeefef;
       box-sizing: border-box;
       padding: 0 10px;
-      top: 620px;
+      top: 679px;
       left: 77%;
       padding-bottom: 10px;
       > span {
@@ -212,7 +212,7 @@ export const AtlasWrapper = styled.div`
       border: 7px solid #eeefef;
       box-sizing: border-box;
       padding: 0 10px;
-      top: 620px;
+      top: 767px;
       left: 29%;
       padding-bottom: 10px;
       > span {
@@ -236,7 +236,7 @@ export const AtlasWrapper = styled.div`
       border: 7px solid #eeefef;
       box-sizing: border-box;
       padding: 0 10px;
-      top: 330px;
+      top: 385px;
       left: 1%;
       padding-bottom: 10px;
       > span {

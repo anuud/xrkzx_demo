@@ -42,6 +42,16 @@ export const SunFlowerWrapper = styled.div`
       width: 58px;
     }
   }
+  .line-l {
+    background: #debe93;
+    height: 2px;
+    width: 11.3%;
+    margin: 20px 0;
+  }
+  .line-text {
+    color: #e5c498;
+    padding-top: 10pxs;
+  }
 `;
 export const SunFlowerLeft = styled.div`
   position: relative;

@@ -7,6 +7,7 @@ const About = React.lazy(() => import('../views/about'));
 const Message = React.lazy(() => import('../views/message'));
 const SunFlower = React.lazy(() => import('../views/sunflower'));
 const Signup = React.lazy(() => import('../views/signup'));
+const Detail = React.lazy(() => import('../views/detail'));
 
 const routes: RouteObject[] = [
   {
@@ -40,6 +41,10 @@ const routes: RouteObject[] = [
   {
     path: 'signup',
     element: <Signup />
+  },
+  {
+    path: '/school/:id',
+    element: <Detail />
   }
 ];
 

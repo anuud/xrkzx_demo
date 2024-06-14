@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const SchoolWrapper = styled.div`
   width: 100%;
   .school-top {
-    height: 400px;
-    background-image: url(${require('../../assets/images/1653034916455318.jpg')});
+    height: 559px;
     .school_search {
       width: 70%;
       margin: 0 auto;

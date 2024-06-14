@@ -1,7 +1,6 @@
 import React from 'react';
 import type { ReactNode, FC } from 'react';
 import { ChannelTitWrapper } from './styled';
-import { DesktopOutlined } from '@ant-design/icons';
 interface IProps {
   children?: ReactNode;
   text: string;

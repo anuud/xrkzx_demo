@@ -2,24 +2,15 @@ import React, { useRef, useState } from 'react';
 import type { ReactNode, FC, ElementRef } from 'react';
 import { SunFlowerLeft, SunFlowerWrapper } from './styled';
 import { Button, Carousel, Space } from 'antd';
-import { useAppSelector } from '../../store';
-import { shallowEqual } from 'react-redux';
 import { SearchOutlined, WhatsAppOutlined } from '@ant-design/icons';
+import { bannerlist } from '../../assets/data/bannerList';
 interface IProps {
   children?: ReactNode;
 }
 const SunFlower: FC<IProps> = () => {
-  /** 定义内部的数据 */
+  // /** 定义内部的数据 */
   const [, setCurrentIndex] = useState(0);
   const bannerRef = useRef<ElementRef<typeof Carousel>>(null);
-
-  // 从store中获取数据
-  const { bannerlist } = useAppSelector(
-    (state) => ({
-      bannerlist: state.homelist.bannerlist
-    }),
-    shallowEqual
-  );
   function handleAfterChange(current: number) {
     setCurrentIndex(current);
   }
@@ -36,8 +27,8 @@ const SunFlower: FC<IProps> = () => {
           >
             {bannerlist?.map((item) => {
               return (
-                <div className="banner-item" key={item.img_id}>
-                  <img className="image" src={item.image_url} />
+                <div className="banner-item" key={item._id}>
+                  <img className="image" src={item.url} />
                 </div>
               );
             })}
@@ -154,6 +145,13 @@ const SunFlower: FC<IProps> = () => {
                 <span>省时省心：</span>
                 <span>从择校到入学全程专属跟进，助力读心仪名校</span>
               </div>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center justify-center">
+              <div className="line-l"></div>
+              <div className="line-text">7重权益护航</div>
+              <div className="line-l"></div>
             </div>
           </div>
         </div>

@@ -40,11 +40,11 @@ export const HomeShool = [
         image_url: [
           {
             _id: nanoid(),
-            URL: `${require('../images/home/kthgmj02qb.jpg')}`
+            URL: `${require('../images/home/165372734393973200_a700xH.jpeg')}`
           },
           {
             _id: nanoid(),
-            URL: `${require('../images/home/8dj3cfk3mq.jpg')}`
+            URL: `${require('../images/home/R-C.png')}`
           },
           {
             _id: nanoid(),
@@ -96,7 +96,7 @@ export const HomeShool = [
         image_url: [
           {
             _id: nanoid(),
-            URL: `${require('../images/home/kthgmj02qb.jpg')}`
+            URL: `${require('../images/home/165372734393973200_a700xH.jpeg')}`
           },
           {
             _id: nanoid(),

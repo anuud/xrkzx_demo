@@ -1,3 +1,5 @@
+import { nanoid } from 'nanoid';
+
 export const homelist = [
   {
     _id: '1',
@@ -22,5 +24,28 @@ export const homelist = [
     href: `${require('../images/home/5f763fcda8645eb6270ffab240218413.jpg')}`,
     title: `2最新!2024广东高考时间具体安排表`,
     subtitle: `2024年广东高考时间为6月7日—6月9日，以下是各科目考试时间具体安排表，供大家参考。如有变动，以考试院公布信息为准。一、广东                                        `
+  }
+];
+
+export const campus = [
+  {
+    _id: nanoid(),
+    name: '学校教学楼',
+    image_URL: `${require('../images/school/15488127355c5101bfb9b4e.jpg')}`
+  },
+  {
+    _id: nanoid(),
+    name: '学校毕业生',
+    image_URL: `${require('../images/school/15488128095c510209750e6.jpg')}`
+  },
+  {
+    _id: nanoid(),
+    name: '学校游泳馆',
+    image_URL: `${require('../images/school/15488130975c5103294b71f.jpg')}`
+  },
+  {
+    _id: nanoid(),
+    name: '学校室内篮球馆',
+    image_URL: `${require('../images/school/15488131235c510343817ec.jpg')}`
   }
 ];

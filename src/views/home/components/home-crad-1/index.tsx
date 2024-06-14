@@ -12,14 +12,13 @@ const HomeCrad1: FC<IProps> = () => {
   const [name, setName] = useState<any[]>();
   const tabClickHandle = useCallback((index: number, item: any) => {
     setName(item.list);
-    console.log(item);
   }, []);
   useEffect(() => {
     setName(HomeShool[0].list);
   });
   return (
     <HomeCrad1Wrapper>
-      <div className="w-3/5 m-auto mt-7 bg-white">
+      <div className="w-4/5 m-auto mt-7 bg-white">
         <div className="flex justify-between ">
           {HomeCard1?.map((item) => {
             return (
@@ -68,8 +67,8 @@ const HomeCrad1: FC<IProps> = () => {
             <span>学生社团 | 升学毕业</span>
           </div>
         </div>
-        <div className="w-[100%] m-auto home-help">
-          <span className="absolute left-[40%] text-white font-bold text-xl bottom-[22%]">
+        <div className="w-[100%] m-auto h-[500px] home-help">
+          <span className="absolute left-[43%] text-white font-bold text-xl bottom-[24%]">
             立即帮我找学校
           </span>
         </div>

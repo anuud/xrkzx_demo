@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HomeFocusWrapper = styled.div`
-  margin-top: 20px;
+  margin: 20px 0;
   .left {
     width: 100px;
     height: 38px;
