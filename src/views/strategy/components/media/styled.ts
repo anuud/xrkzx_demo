@@ -75,4 +75,17 @@ export const MediaStrategyWrapper = styled.div`
       }
     }
   }
+  .banner-item {
+    display: flex;
+  }
+  .m-footer {
+    width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    background: url(${require('../../../../assets/images/picture/form_bg.png')}) 0 0 no-repeat;
+  }
 `;

@@ -3,7 +3,9 @@ import type { ReactNode, FC } from 'react';
 import { MediaStrategyWrapper } from './styled';
 import Caption from '../caption';
 import { strategy_media } from '../../../../assets/data/strategy-media';
-import { RightOutlined } from '@ant-design/icons';
+import { strategy_banner } from '../../../../assets/data/strategy-banner';
+import { LockOutlined, RightOutlined, UserOutlined, WhatsAppOutlined } from '@ant-design/icons';
+import { Carousel, Form, Input } from 'antd';
 interface IProps {
   children?: ReactNode;
 }
@@ -52,6 +54,60 @@ const MediaStrategy: FC<IProps> = () => {
         </div>
         <div className="w-[85%] m-auto mt-5 mb-5 media-banner">
           <h5>历届教育展帮您了解国际学校详细信息</h5>
+          <Carousel autoplay className="mt-8">
+            {strategy_banner.map((item) => {
+              return (
+                <div key={item._id} className="h-[270px] banner-item mb-3">
+                  <div className="flex">
+                    {item.list.map((list) => {
+                      return (
+                        <div key={list._id} className=" relative">
+                          <img src={list.img} alt="" />
+                          <div className=" absolute left-3 bottom-2">
+                            <div className="text-center">{list.name}</div>
+                            <div className="text-center">{list.text}</div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </Carousel>
+        </div>
+        <div className="m-footer">
+          <div className=" relative text-base font-bold text-white">
+            <h6 className="text-center">
+              免费预约参加 <br />
+              近期国际学校择校展
+            </h6>
+            <Form action="">
+              <Form.Item
+                name="username"
+                rules={[{ required: true, message: 'Please input your Username!' }]}
+                style={{ textAlign: 'center', marginTop: '30px' }}
+              >
+                <Input
+                  prefix={<UserOutlined className="site-form-item-icon" />}
+                  placeholder="请输入名字"
+                  style={{ width: '200px', height: '45px' }}
+                />
+              </Form.Item>
+              <Form.Item
+                name="ipone"
+                rules={[{ required: true, message: 'Please input your Password!' }]}
+                style={{ textAlign: 'center' }}
+              >
+                <Input
+                  prefix={<WhatsAppOutlined />}
+                  type="password"
+                  placeholder="请输入电话"
+                  style={{ width: '200px', height: '45px' }}
+                />
+              </Form.Item>
+            </Form>
+          </div>
         </div>
       </div>
     </MediaStrategyWrapper>
