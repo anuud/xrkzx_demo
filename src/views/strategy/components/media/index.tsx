@@ -4,7 +4,7 @@ import { MediaStrategyWrapper } from './styled';
 import Caption from '../caption';
 import { strategy_media } from '../../../../assets/data/strategy-media';
 import { strategy_banner } from '../../../../assets/data/strategy-banner';
-import { LockOutlined, RightOutlined, UserOutlined, WhatsAppOutlined } from '@ant-design/icons';
+import { RightOutlined, UserOutlined, WhatsAppOutlined } from '@ant-design/icons';
 import { Carousel, Form, Input } from 'antd';
 interface IProps {
   children?: ReactNode;

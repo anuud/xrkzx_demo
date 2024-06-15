@@ -14,15 +14,19 @@
     "type": "path",
     "link": "/strategy"
   },
-
+  {
+    "title": "课程提升",
+    "type": "path",
+    "link": "/promote"
+  },
   {
     "title": "小葵探校",
     "type": "path",
-    "link": "sunflower"
+    "link": "/sunflower"
   },
   {
     "title": "关于我们",
     "type": "path",
-    "link": "about"
+    "link": "/about"
   }
 ]
