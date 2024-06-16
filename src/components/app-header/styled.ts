@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const AppHeaderWrapper = styled.div`
-  width: 100%;
+  width: 1320px;
   height: 89px;
   background-color: white;
+  margin: 0 auto;
   font-size: 14px;
   color: #fff;
   z-index: 999;
@@ -43,9 +44,9 @@ export const MainWrapper = styled.div`
 
       a {
         display: block;
-        padding: 0 20px;
+        padding: 0 16px;
         color: #333;
-        font-size: 19px;
+        font-size: 17px;
       }
 
       :last-of-type a {

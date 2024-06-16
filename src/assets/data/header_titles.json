@@ -28,5 +28,10 @@
     "title": "关于我们",
     "type": "path",
     "link": "/about"
+  },
+  {
+    "title": "院校库",
+    "type": "path",
+    "link": "/academy"
   }
 ]

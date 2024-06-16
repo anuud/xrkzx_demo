@@ -9,6 +9,7 @@ const SunFlower = React.lazy(() => import('../views/sunflower'));
 const Signup = React.lazy(() => import('../views/signup'));
 const Detail = React.lazy(() => import('../views/detail'));
 const Promote = React.lazy(() => import('../views/promote'));
+const Academy = React.lazy(() => import('../views/academy'));
 
 const routes: RouteObject[] = [
   {
@@ -50,6 +51,10 @@ const routes: RouteObject[] = [
   {
     path: '/school/:id',
     element: <Detail />
+  },
+  {
+    path: '/academy',
+    element: <Academy />
   }
 ];
 
