@@ -7,7 +7,7 @@ export const SubTabsWrapper = styled.div`
   border-bottom: 2px solid #d0d5da;
   display: flex;
   justify-content: space-between;
-  height: 45px;
+  height: 54px;
   line-height: 45px;
   > h1 {
     margin-top: 10px;

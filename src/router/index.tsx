@@ -10,6 +10,7 @@ const Signup = React.lazy(() => import('../views/signup'));
 const Detail = React.lazy(() => import('../views/detail'));
 const Promote = React.lazy(() => import('../views/promote'));
 const Academy = React.lazy(() => import('../views/academy'));
+const NotFound = React.lazy(() => import('../views/not-funt'));
 
 const routes: RouteObject[] = [
   {
@@ -55,6 +56,10 @@ const routes: RouteObject[] = [
   {
     path: '/academy',
     element: <Academy />
+  },
+  {
+    path: '*',
+    element: <NotFound />
   }
 ];
 

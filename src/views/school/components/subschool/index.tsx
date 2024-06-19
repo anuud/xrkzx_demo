@@ -2,19 +2,24 @@ import React from 'react';
 import type { ReactNode, FC } from 'react';
 import { SubChoolWrapper } from './styled';
 import { Tag } from 'antd';
+import { useNavigate } from 'react-router-dom';
 interface IProps {
   children?: ReactNode;
   schoolInfo: any[];
 }
 const SubSchool: FC<IProps> = (props) => {
   const { schoolInfo } = props;
-  console.log(schoolInfo);
+  const nav = useNavigate();
+
+  const changeNav = () => {
+    nav('/school/1');
+  };
 
   return (
     <SubChoolWrapper>
       {schoolInfo?.map((item) => {
         return (
-          <div key={item._id} className="w-[24%] m-1 bg-white cread">
+          <div key={item._id} className="w-[24%] m-1 bg-white cread" onClick={() => changeNav()}>
             <img src={item.image_url} alt="" className="w-full ml-1" />
             <div className="item">
               <span>{item.schoolname}</span>

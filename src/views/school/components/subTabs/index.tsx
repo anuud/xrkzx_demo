@@ -3,6 +3,7 @@ import type { ReactNode, FC } from 'react';
 import { SubTabsWrapper } from './styled';
 import { RightOutlined } from '@ant-design/icons';
 import { nanoid } from 'nanoid';
+import { useNavigate } from 'react-router-dom';
 interface IProps {
   children?: ReactNode;
   name: string;
@@ -32,8 +33,12 @@ const courseInfo: any[] = [
 ];
 const SubTitle: FC<IProps> = (props) => {
   const { name, tabClick } = props;
+  const nav = useNavigate();
   const changCursel = (courseL: string) => {
     tabClick(courseL);
+  };
+  const handlecNav = () => {
+    nav('/academy');
   };
   return (
     <SubTabsWrapper>
@@ -51,7 +56,7 @@ const SubTitle: FC<IProps> = (props) => {
           })}
         </ul>
       </div>
-      <span>
+      <span onClick={() => handlecNav()}>
         更多学校
         <RightOutlined />
       </span>

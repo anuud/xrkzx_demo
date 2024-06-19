@@ -43,26 +43,32 @@ const HomeCrad1: FC<IProps> = () => {
         </div>
         <div className="flex justify-around mt-8">
           <div className="text-center">
-            <img
-              src={require('../../../../assets/images/home/14d6296df26b19663c4c6fa3a59d1dd9dd44ba42.png')}
-              alt=""
-            />
+            <div className="flex justify-center">
+              <img
+                src={require('../../../../assets/images/home/14d6296df26b19663c4c6fa3a59d1dd9dd44ba42.png')}
+                alt=""
+              />
+            </div>
             <h5 className="text-sm font-bold p-2">名校榜单</h5>
             <span>TOP10 | 热门学校</span>
           </div>
           <div className="text-center">
-            <img
-              src={require('../../../../assets/images/home/3e89f98864ccc3648065480a26c453d6d77941ec.png')}
-              alt=""
-            />
+            <div className="flex justify-center">
+              <img
+                src={require('../../../../assets/images/home/3e89f98864ccc3648065480a26c453d6d77941ec.png')}
+                alt=""
+              />
+            </div>
             <h5 className="text-sm font-bold p-2">向日葵探校</h5>
             <span>打卡校园 | 一探究竟</span>
           </div>
           <div className="text-center">
-            <img
-              src={require('../../../../assets/images/home/b925958892bb265c885d162b339237df9380cddc.png')}
-              alt=""
-            />
+            <div className="flex justify-center">
+              <img
+                src={require('../../../../assets/images/home/b925958892bb265c885d162b339237df9380cddc.png')}
+                alt=""
+              />
+            </div>
             <h5 className="text-sm font-bold p-2">校园看点</h5>
             <span>学生社团 | 升学毕业</span>
           </div>
