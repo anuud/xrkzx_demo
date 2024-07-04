@@ -46,7 +46,7 @@ const Signup: FC<IProps> = () => {
             <Form.Item>
               <Button
                 htmlType="submit"
-                style={{ backgroundColor: '#fe6700', width: '100%', color: '#fff' }}
+                style={{ backgroundColor: '#fe6700', width: '100%', color: '#fff', height: '50px' }}
               >
                 立即提交
               </Button>

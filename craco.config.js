@@ -13,13 +13,14 @@ module.exports = {
       }
     }
   ],
-
   devServer: {
     proxy: {
-      '/api': 'http://localhost:3003',
-      changeOrigin: true,
-      pathRewrite: {
-        '^/api': ''
+      '/api': {
+        target: 'http://8.138.7.174:8000',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
       }
     }
   },

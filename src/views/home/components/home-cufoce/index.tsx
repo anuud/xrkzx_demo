@@ -27,7 +27,7 @@ const foucus = [
 const HomeFocus: FC<IProps> = () => {
   return (
     <HomeFocusWrapper>
-      <div className="w-3/5 m-auto">
+      <div className="w-4/5 m-auto">
         <div className="flex justify-between px-6">
           <div className="left">
             <img src={require('../../../../assets/images/home/see_logo.png')} alt="" />

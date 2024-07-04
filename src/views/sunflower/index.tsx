@@ -16,7 +16,7 @@ const SunFlower: FC<IProps> = () => {
   }
   return (
     <SunFlowerWrapper>
-      <div className="w-[80%] m-auto">
+      <div className="w-full m-auto">
         <SunFlowerLeft>
           <Carousel
             autoplay
@@ -34,7 +34,7 @@ const SunFlower: FC<IProps> = () => {
             })}
           </Carousel>
         </SunFlowerLeft>
-        <div>
+        <div className="w-[80%] m-auto">
           <div className="flex mt-8">
             <div className="flex-1 crad-left">
               <h4 className="text-base font-bold p-2">入学诊断</h4>
@@ -77,7 +77,7 @@ const SunFlower: FC<IProps> = () => {
             </div>
           </div>
         </div>
-        <div className="mb-5">
+        <div className="mb-5 w-[70%] m-auto mt-5">
           <span className="font-bold block py-2">找国际化学校问小葵</span>
           <div className="lay">
             <div className="stop">

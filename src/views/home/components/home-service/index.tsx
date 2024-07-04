@@ -8,12 +8,12 @@ interface IProps {
   children?: ReactNode;
 }
 const HomeService: FC<IProps> = () => {
-  const { waiterlist } = useAppSelector(
-    (state) => ({
-      waiterlist: state.homelist.waiterlist
-    }),
-    shallowEqual
-  );
+  // const { waiterlist } = useAppSelector(
+  //   (state) => ({
+  //     waiterlist: state.homelist.waiterlist
+  //   }),
+  //   shallowEqual
+  // );
 
   return (
     <HomeServiceWrapper>
@@ -21,7 +21,7 @@ const HomeService: FC<IProps> = () => {
         <AreaCaption text="SERVICE" page="留学多对一服务流程" />
       </div>
       <div className="w-4/5 m-auto wrap pt-2 pb-5 mb-5">
-        <div className="card">
+        {/* <div className="card">
           {waiterlist?.map((item) => {
             return (
               <div className="item" key={item._id}>
@@ -40,7 +40,7 @@ const HomeService: FC<IProps> = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </HomeServiceWrapper>
   );

@@ -13,7 +13,7 @@ export const BannerLeft = styled.div`
 
   .banner-item {
     overflow: hidden;
-    height: 495px;
+    height: 559px;
     .image {
       width: 100%;
       height: 100%;

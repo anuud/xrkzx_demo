@@ -18,7 +18,7 @@ const AboutProfile: FC<IProps> = () => {
             <img
               src={require('../../../../assets/images/1653110557209205.jpg')}
               alt=""
-              className=" m-auto"
+              className=" m-auto w-full"
             />
           </div>
         </div>

@@ -2,12 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import type { ReactNode, FC } from 'react';
 import headerTitles from '../../assets/data/header_titles.json';
 import { AppHeaderWrapper, MainWrapper } from './styled';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 interface IProps {
   children?: ReactNode;
 }
 const AppHeader: FC<IProps> = () => {
   const domRef = useRef(null);
+  const locations = useLocation();
+  const navgite = useNavigate();
   useEffect(() => {
     console.log(domRef.current);
   }, []);
@@ -35,14 +37,16 @@ const AppHeader: FC<IProps> = () => {
 
   return (
     <AppHeaderWrapper>
-      {/* <div className="w-[65%] m-auto" ref={domRef}>
-        <img
-          src={require('../../assets/images/home/20240612210830.png')}
-          alt=""
-          style={{ width: '1000px', height: '100px' }}
-        />
-      </div> */}
-      <div className="w-4/5 m-auto flex justify-between pt-2">
+      {locations.pathname === '/home' && (
+        <div className="w-full m-auto" ref={domRef} onClick={() => navgite('/signup')}>
+          <img
+            src={require('../../assets/images/home/20240621102524.png')}
+            alt=""
+            style={{ width: '100%', height: '80px', margin: '0 auto' }}
+          />
+        </div>
+      )}
+      <div className=" m-auto flex justify-between pt-2">
         <div>
           <a href="#">
             <img

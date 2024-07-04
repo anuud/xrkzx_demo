@@ -14,17 +14,18 @@ const SectionsTabs: FC<IProps> = (props) => {
     setcurrentIndex(index);
     tabClick(index, item);
   }
+
   return (
     <SectionsTabsWrapper>
       <div className="flex">
         {props.tabNames.map((item, index) => {
           return (
             <div
-              key={item._id}
+              key={item.id}
               className={classNames('item', { active: index === currentIndex })}
-              onClick={(e) => itemClickHandle(index, item)}
+              onClick={() => itemClickHandle(index, item)}
             >
-              {item.text}
+              {item.name}
             </div>
           );
         })}

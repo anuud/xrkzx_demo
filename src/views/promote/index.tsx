@@ -31,11 +31,7 @@ const Promote: FC<IProps> = () => {
   return (
     <PromoteWrapper>
       <div>
-        <img
-          src={require('../../assets/images/promote/course_1.jpg')}
-          alt=""
-          className="w-[702px] m-auto"
-        />
+        <img src={require('../../assets/images/promote/toplogo.png')} alt="" />
         <div className="text-xl leading-[3.5rem] font-bold text-center text-blue-400">
           双语/DSE/外籍等国际话学校入学有哪些门槛
         </div>

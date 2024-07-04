@@ -1,23 +1,18 @@
 import React, { useRef, useState } from 'react';
-import type { ReactNode, FC, ElementRef } from 'react';
+import type { FC, ElementRef } from 'react';
 import { BannerLeft, TopBannerWrapper } from './styled';
 import { Carousel } from 'antd';
 import { useAppSelector } from '../../../../store';
 import { shallowEqual } from 'react-redux';
 
-interface IProps {
-  children?: ReactNode;
-}
-const TopBanner: FC<IProps> = () => {
+const TopBanner: FC = () => {
   /** 定义内部的数据 */
   const [, setCurrentIndex] = useState(0);
   const bannerRef = useRef<ElementRef<typeof Carousel>>(null);
 
-  // 从store中获取数据
-  const { bannerlist } = useAppSelector(
-    (state) => ({
-      bannerlist: state.homelist.bannerlist
-    }),
+  // // 从store中获取数据
+  const { bannerinfo } = useAppSelector(
+    (state) => ({ bannerinfo: state.homelist.bannerlist }),
     shallowEqual
   );
   function handleAfterChange(current: number) {
@@ -35,13 +30,14 @@ const TopBanner: FC<IProps> = () => {
             ref={bannerRef}
             afterChange={handleAfterChange}
           >
-            {bannerlist?.map((item) => {
-              return (
-                <div className="banner-item" key={item.img_id}>
-                  <img className="image" src={item.image_url} />
-                </div>
-              );
-            })}
+            {bannerinfo &&
+              bannerinfo?.map((item) => {
+                return (
+                  <div className="banner-item" key={item.filename}>
+                    <img className="image" src={item.banner_url} />
+                  </div>
+                );
+              })}
           </Carousel>
         </BannerLeft>
         {/* <div>

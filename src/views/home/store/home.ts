@@ -1,23 +1,27 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { getBanners } from '../service/home';
+import { getBanners, getstytem } from '../service/home';
+// import { getBanners } from '../service/home';
 
-export const fetchRecommendDataAction = createAsyncThunk('fetchdata', (_, { dispatch }) => {
+export const fetchHomeDataAction = createAsyncThunk('fetchdata', (_, { dispatch }) => {
   getBanners().then((res) => {
-    dispatch(changeBannersAction(res.data.bannerlist));
-    dispatch(changewaiterAction(res.data.waiterlist));
-    dispatch(changeimagelisAction(res.data.aboutimagelist));
+    dispatch(changeBannersAction(res.data));
   });
 });
-
+export const fetchHomeStystemDataAction = createAsyncThunk(
+  'fetchdata',
+  (params: string, { dispatch }) => {
+    getstytem(params).then((res) => {
+      dispatch(changestystemction(res.data));
+    });
+  }
+);
 interface HomelistState {
   bannerlist: any[];
-  aboutimagelist: any[];
-  waiterlist: any[];
+  stystemlist: any[];
 }
 const initialState: HomelistState = {
   bannerlist: [],
-  aboutimagelist: [],
-  waiterlist: []
+  stystemlist: []
 };
 
 const homelistSlice = createSlice({
@@ -27,14 +31,13 @@ const homelistSlice = createSlice({
     changeBannersAction(state, { payload }) {
       state.bannerlist = payload;
     },
-    changewaiterAction(state, { payload }) {
-      state.waiterlist = payload;
-    },
-    changeimagelisAction(state, { payload }) {
-      state.aboutimagelist = payload;
+    changestystemction(state, { payload }) {
+      state.stystemlist = payload;
     }
+    // changeimagelisAction(state, { payload }) {
+    //   state.aboutimagelist = payload;
+    // }
   }
 });
-export const { changeBannersAction, changewaiterAction, changeimagelisAction } =
-  homelistSlice.actions;
+export const { changeBannersAction, changestystemction } = homelistSlice.actions;
 export default homelistSlice.reducer;

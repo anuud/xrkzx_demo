@@ -1,7 +1,7 @@
 import React from 'react';
 import type { ReactNode, FC } from 'react';
 import { CourseWrapper } from './styled';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 interface IProps {
   children?: ReactNode;
 }

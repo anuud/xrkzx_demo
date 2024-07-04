@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 export const AppHeaderWrapper = styled.div`
-  width: 1320px;
-  height: 89px;
-  background-color: white;
-  margin: 0 auto;
-  font-size: 14px;
-  color: #fff;
-  z-index: 999;
+  width: 100%;
+
+  .header {
+    width: 100%;
+    height: 89px;
+    background-color: white;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #fff;
+    z-index: 999;
+  }
   .head-tel {
     padding-left: 35px;
     background: url(${require('../../assets/images/phone.png')}) no-repeat left center;
