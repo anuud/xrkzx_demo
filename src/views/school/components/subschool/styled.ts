@@ -13,7 +13,6 @@ export const SubChoolWrapper = styled.div`
   }
 
   .item {
-    margin-top: -40px;
     > span {
       display: block;
       text-align: center;

@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 interface IProps {
   children?: ReactNode;
   name: string;
-  tabClick: (item: string) => void;
+  tabClick: (name: string, courseL: string) => void;
 }
 const courseInfo: any[] = [
   {
@@ -16,7 +16,7 @@ const courseInfo: any[] = [
   },
   {
     _id: nanoid(),
-    courseL: 'IG/OSSD课程'
+    courseL: 'IG课程'
   },
   {
     _id: nanoid(),
@@ -24,31 +24,31 @@ const courseInfo: any[] = [
   },
   {
     _id: nanoid(),
-    courseL: '香港DSE课程'
+    courseL: 'DSE课程'
   },
   {
     _id: nanoid(),
-    courseL: 'OSSD课程'
+    courseL: 'AP课程'
   }
 ];
 const SubTitle: FC<IProps> = (props) => {
   const { name, tabClick } = props;
   const nav = useNavigate();
-  const changCursel = (courseL: string) => {
-    tabClick(courseL);
+  const changCursel = (name: string, courseL: string) => {
+    tabClick(name, courseL);
   };
   const handlecNav = () => {
     nav('/academy');
   };
   return (
     <SubTabsWrapper>
-      <h1>{name}</h1>
+      <h1>{name}国际学校</h1>
       <div className="h-[32px]">
         <ul className="flex">
           {courseInfo.map((item: any) => {
             return (
               <li key={item._id}>
-                <a className="item" onClick={() => changCursel(item.courseL)}>
+                <a className="item" onClick={() => changCursel(name, item.courseL)}>
                   {item.courseL}
                 </a>
               </li>

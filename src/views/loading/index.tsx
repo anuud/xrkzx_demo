@@ -8,7 +8,7 @@ interface IProps {
 const Loading: FC<IProps> = () => {
   return (
     <LoadingWrapper>
-      <Spin />
+      <img src={require('../../assets/images/loading.gif')} alt="" className="w-full h-full" />
     </LoadingWrapper>
   );
 };

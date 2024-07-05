@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import type { FC, ElementRef } from 'react';
 import { BannerLeft, TopBannerWrapper } from './styled';
 import { Carousel } from 'antd';
-import { useAppSelector } from '../../../../store';
+import { useAppSelector } from '../../store';
 import { shallowEqual } from 'react-redux';
 
 const TopBanner: FC = () => {

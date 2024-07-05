@@ -43,7 +43,7 @@ const HomeFocus: FC<IProps> = () => {
               <div key={item._id} className="flex w-full h-[240px] item p-2">
                 <div className="left flex-1 w-[80%]">
                   <div className="h-[145px] overflow-hidden">{item.foucustitle}</div>
-                  <div className="flex-1 mt-[8%] text-xs flex justify-between">
+                  <div className="flex-1 mt-[6%] text-xs flex justify-between">
                     <span>{item.tag}</span>
                     <span>{item.browse}浏览</span>
                   </div>

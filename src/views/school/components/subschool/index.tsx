@@ -10,38 +10,54 @@ interface IProps {
 const SubSchool: FC<IProps> = (props) => {
   const { schoolInfo } = props;
   const nav = useNavigate();
-
-  const changeNav = () => {
-    nav('/school/1');
+  const changeNav = (id: number) => {
+    nav(`/school/${id}`);
   };
 
   return (
     <SubChoolWrapper>
-      {schoolInfo?.map((item) => {
-        return (
-          <div key={item._id} className="w-[24%] m-1 bg-white cread" onClick={() => changeNav()}>
-            <img src={item.image_url} alt="" className="w-full ml-1" />
-            <div className="item">
-              <span>{item.schoolname}</span>
+      {schoolInfo &&
+        schoolInfo?.slice(0, 8).map((item) => {
+          return (
+            <div
+              key={item.id}
+              className="w-[24%] m-1 bg-white cread"
+              onClick={() => changeNav(item.id)}
+            >
               <div>
-                <div className="m-1">
-                  招生对象：{' '}
-                  {item.recruit.map((list: any) => {
-                    // eslint-disable-next-line react/jsx-key
-                    return <Tag color="magenta">{list}</Tag>;
-                  })}
+                <img src={item.school_icon} alt="" className="w-[97%] ml-1 h-[180px]" />
+              </div>
+              <div className="item">
+                <div className="h-[25px] overflow-hidden text-center">
+                  <span>{item.name}</span>
                 </div>
-                <div className="p-1">
-                  课程体系:
-                  <Tag color="#55acee" className="ml-1">
-                    {item.course}
-                  </Tag>
+                <div>
+                  <div className="m-1 h-[44px]">
+                    招生对象：{' '}
+                    {item.object_info.map((list: any) => {
+                      // eslint-disable-next-line react/jsx-key
+                      return (
+                        <Tag color="magenta" key={list}>
+                          {list}
+                        </Tag>
+                      );
+                    })}
+                  </div>
+                  <div className="p-1 mb-2 h-[25px] overflow-hidden">
+                    课程体系:
+                    {item.course.map((item: any) => {
+                      return (
+                        <Tag color="#55acee" className="ml-1" key={item}>
+                          {item}
+                        </Tag>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
     </SubChoolWrapper>
   );
 };

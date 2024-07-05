@@ -1,10 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useSelector, useDispatch, TypedUseSelectorHook } from 'react-redux';
 import Homelist from '../views/home/store/home';
+import Schoollist from '../views/school/store/school';
+import Detaillist from '../views/detail/store/detail';
 
 const store = configureStore({
   reducer: {
-    homelist: Homelist
+    homelist: Homelist,
+    schoollist: Schoollist,
+    detaillist: Detaillist
   }
 });
 

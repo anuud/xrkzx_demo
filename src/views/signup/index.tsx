@@ -8,7 +8,7 @@ interface IProps {
 const Signup: FC<IProps> = () => {
   return (
     <SignupWrapper>
-      <div className=" lg:w-[750px] m-auto xs:w-[375px]">
+      <div className=" lg:w-[750px] m-auto xs:w-[375px] bg-white">
         <div className="flex justify-between">
           <a href="#">
             <img
@@ -25,22 +25,16 @@ const Signup: FC<IProps> = () => {
         <div className="signup-item bg-gray-300 p-4">
           <h1 className=" leading-9 text-center text-xl p-4">立即报名国际学校择校展</h1>
           <Form>
-            <Form.Item
-              name="username"
-              rules={[{ required: true, message: 'Please input your username!' }]}
-            >
+            <Form.Item name="username" rules={[{ required: true, message: '请输入学生姓名' }]}>
               <Input placeholder="学生姓名" style={{ height: '50px' }} />
             </Form.Item>
             <Form.Item
               name="cellphone"
-              rules={[{ required: true, message: 'Please input your mobile phone!' }]}
+              rules={[{ required: true, message: '请输入正确的手机号码' }]}
             >
               <Input placeholder="手机联系号码" style={{ height: '50px' }} />
             </Form.Item>
-            <Form.Item
-              name="grade"
-              rules={[{ required: true, message: 'Please input your grade' }]}
-            >
+            <Form.Item name="grade" rules={[{ required: true, message: '请输入在读年级' }]}>
               <Input placeholder="在读年级" style={{ height: '50px' }} />
             </Form.Item>
             <Form.Item>

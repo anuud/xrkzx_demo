@@ -1,40 +1,18 @@
-import React, { useRef, useState } from 'react';
-import type { ReactNode, FC, ElementRef } from 'react';
-import { SunFlowerLeft, SunFlowerWrapper } from './styled';
-import { Button, Carousel, Space } from 'antd';
+import React from 'react';
+import type { ReactNode, FC } from 'react';
+import { SunFlowerWrapper } from './styled';
+import { Button, Space } from 'antd';
 import { SearchOutlined, WhatsAppOutlined } from '@ant-design/icons';
-import { bannerlist } from '../../assets/data/bannerList';
+import TopBanner from '../../components/top-banner';
 interface IProps {
   children?: ReactNode;
 }
 const SunFlower: FC<IProps> = () => {
-  // /** 定义内部的数据 */
-  const [, setCurrentIndex] = useState(0);
-  const bannerRef = useRef<ElementRef<typeof Carousel>>(null);
-  function handleAfterChange(current: number) {
-    setCurrentIndex(current);
-  }
   return (
     <SunFlowerWrapper>
       <div className="w-full m-auto">
-        <SunFlowerLeft>
-          <Carousel
-            autoplay
-            autoplaySpeed={3000}
-            effect="fade"
-            ref={bannerRef}
-            afterChange={handleAfterChange}
-          >
-            {bannerlist?.map((item) => {
-              return (
-                <div className="banner-item" key={item._id}>
-                  <img className="image" src={item.url} />
-                </div>
-              );
-            })}
-          </Carousel>
-        </SunFlowerLeft>
-        <div className="w-[80%] m-auto">
+        <TopBanner />
+        <div className="w-[70%] m-auto">
           <div className="flex mt-8">
             <div className="flex-1 crad-left">
               <h4 className="text-base font-bold p-2">入学诊断</h4>
@@ -77,7 +55,7 @@ const SunFlower: FC<IProps> = () => {
             </div>
           </div>
         </div>
-        <div className="mb-5 w-[70%] m-auto mt-5">
+        <div className="mb-5 w-[60%] m-auto mt-5">
           <span className="font-bold block py-2">找国际化学校问小葵</span>
           <div className="lay">
             <div className="stop">
