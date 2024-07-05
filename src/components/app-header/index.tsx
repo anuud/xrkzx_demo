@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import type { ReactNode, FC } from 'react';
 import headerTitles from '../../assets/data/header_titles.json';
 import { AppHeaderWrapper, MainWrapper } from './styled';
@@ -10,9 +10,6 @@ const AppHeader: FC<IProps> = () => {
   const domRef = useRef(null);
   const locations = useLocation();
   const navgite = useNavigate();
-  useEffect(() => {
-    console.log(domRef.current);
-  }, []);
   function showItem(item: any) {
     if (item.type === 'path') {
       return (

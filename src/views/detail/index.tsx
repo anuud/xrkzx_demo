@@ -100,7 +100,11 @@ const Detail: FC<IProps> = () => {
                     {item.campus.map((item: any, index: string) => {
                       return (
                         <div key={index} className="w-[25%] p-1">
-                          <img src={item.shool_image} alt="" />
+                          <img
+                            src={item.shool_image}
+                            alt=""
+                            style={{ width: '217px', height: '155px' }}
+                          />
                           <div className="text-center">{item.name}</div>
                         </div>
                       );

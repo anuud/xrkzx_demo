@@ -1,13 +1,68 @@
 import React from 'react';
 import type { ReactNode, FC } from 'react';
 import { SignupWrapper } from './styled';
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input, message } from 'antd';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { getSignupSchool } from './service/signup';
+import { useAppDispatch } from '../../store';
 interface IProps {
   children?: ReactNode;
 }
+type SignupData = {
+  name: string;
+  phone: number;
+  grade: string;
+};
+const fetchDataAsync = createAsyncThunk(
+  'fetchdata',
+  async (Applaydata: SignupData, { dispatch }) => {
+    try {
+      const data = await getSignupSchool(Applaydata);
+      return data;
+    } catch (error) {
+      return error;
+    }
+  }
+);
 const Signup: FC<IProps> = () => {
+  const dispatch = useAppDispatch();
+  const [form] = Form.useForm();
+  const [messageApi, contextHolder] = message.useMessage();
+  const changbtnfrom = (e: any) => {
+    const { name, phone, grade } = e;
+    dispatch(fetchDataAsync({ name, phone, grade }));
+    messageApi.open({
+      type: 'success',
+      content: '提交成功',
+      className: 'custom-class',
+      style: {
+        marginTop: '20vh'
+      }
+    });
+    form.resetFields();
+  };
+
+  const validateMobile = (rule: any, value: any) => {
+    const mobileRegex = /^1[3-9]\d{9}$/;
+    if (!value) {
+      return Promise.reject('请输入手机号码');
+    } else if (!mobileRegex.test(value)) {
+      return Promise.reject('手机号码格式不正确');
+    }
+    return Promise.resolve();
+  };
+  const validateGrade = (rule: any, value: any) => {
+    const mobileRegex = /^(一|二|三|四|五|六|七|八|九|高[一|二|三])年级$/;
+    if (!value) {
+      return Promise.reject('请输入年级（一到九年级、高一到高三年级）');
+    } else if (!mobileRegex.test(value)) {
+      return Promise.reject('年级格式不正确');
+    }
+    return Promise.resolve();
+  };
   return (
     <SignupWrapper>
+      {contextHolder}
       <div className=" lg:w-[750px] m-auto xs:w-[375px] bg-white">
         <div className="flex justify-between">
           <a href="#">
@@ -24,17 +79,14 @@ const Signup: FC<IProps> = () => {
         <img src={require('../../assets/images/baoming/y-ban3.jpg')} alt="" />
         <div className="signup-item bg-gray-300 p-4">
           <h1 className=" leading-9 text-center text-xl p-4">立即报名国际学校择校展</h1>
-          <Form>
-            <Form.Item name="username" rules={[{ required: true, message: '请输入学生姓名' }]}>
+          <Form form={form} onFinish={(e) => changbtnfrom(e)}>
+            <Form.Item name="name" rules={[{ required: true, message: '请输入学生姓名' }]}>
               <Input placeholder="学生姓名" style={{ height: '50px' }} />
             </Form.Item>
-            <Form.Item
-              name="cellphone"
-              rules={[{ required: true, message: '请输入正确的手机号码' }]}
-            >
+            <Form.Item name="phone" rules={[{ required: true, validator: validateMobile }]}>
               <Input placeholder="手机联系号码" style={{ height: '50px' }} />
             </Form.Item>
-            <Form.Item name="grade" rules={[{ required: true, message: '请输入在读年级' }]}>
+            <Form.Item name="grade" rules={[{ required: true, validator: validateGrade }]}>
               <Input placeholder="在读年级" style={{ height: '50px' }} />
             </Form.Item>
             <Form.Item>
