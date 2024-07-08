@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import type { ReactNode, FC } from 'react';
 import AboutHeader from './components/about-header';
 import AboutProfile from './components/about-profile';
@@ -15,4 +15,4 @@ const About: FC<IProps> = () => {
     </div>
   );
 };
-export default About;
+export default memo(About);

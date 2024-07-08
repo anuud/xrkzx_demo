@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import type { ReactNode, FC } from 'react';
 import { AboutHeaderWrapper } from './styled';
 interface IProps {
@@ -16,4 +16,4 @@ const AboutHeader: FC<IProps> = () => {
     </AboutHeaderWrapper>
   );
 };
-export default AboutHeader;
+export default memo(AboutHeader);

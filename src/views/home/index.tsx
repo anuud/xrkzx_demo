@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import { HomeWrapper } from './styled';
 import { useAppDispatch } from '../../store';
 import { fetchHomeDataAction } from './store/home';
@@ -25,4 +25,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);

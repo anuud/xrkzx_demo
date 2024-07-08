@@ -19,7 +19,7 @@ module.exports = {
         target: 'http://8.138.7.174:8000',
         changeOrigin: true,
         pathRewrite: {
-          '^/api': ''
+          '^/api': '' // 如果你的接口路径带有 '/api' 前缀，这里将其重写为空，以匹配目标接口的真实路径
         }
       }
     }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import type { ReactNode, FC } from 'react';
 import { AboutHeaderWrapper } from '../about-header/styled';
 import AreaHeader from '../../../../components/area-header';
@@ -49,4 +49,4 @@ const AboutProfile: FC<IProps> = () => {
     </AboutHeaderWrapper>
   );
 };
-export default AboutProfile;
+export default memo(AboutProfile);
