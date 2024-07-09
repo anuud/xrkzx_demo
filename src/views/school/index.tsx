@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect } from 'react';
 import type { ReactNode, FC } from 'react';
 import { SchoolWrapper } from './styled';
 import SubTitle from './components/subTabs';

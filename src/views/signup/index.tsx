@@ -13,17 +13,14 @@ type SignupData = {
   phone: number;
   grade: string;
 };
-const fetchDataAsync = createAsyncThunk(
-  'fetchdata',
-  async (Applaydata: SignupData, { dispatch }) => {
-    try {
-      const data = await getSignupSchool(Applaydata);
-      return data;
-    } catch (error) {
-      return error;
-    }
+const fetchDataAsync = createAsyncThunk('fetchdata', async (Applaydata: SignupData) => {
+  try {
+    const data = await getSignupSchool(Applaydata);
+    return data;
+  } catch (error) {
+    return error;
   }
-);
+});
 const Signup: FC<IProps> = () => {
   const dispatch = useAppDispatch();
   const [form] = Form.useForm();

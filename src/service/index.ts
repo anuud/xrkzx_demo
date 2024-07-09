@@ -4,6 +4,7 @@ import HRequest from './request';
 const Request = new HRequest({
   baseURL: BASE_URL,
   timeout: TIME_OUT,
+  withCredentials: true,
   interceptors: {
     requestSuccessFn: (config) => {
       return config;

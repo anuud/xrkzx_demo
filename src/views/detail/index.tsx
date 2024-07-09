@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import type { ReactNode, FC } from 'react';
 import { DetailWrapper } from './styled';
 import DetailTopinfo from './components/detail-topinfo';
-import { campus } from '../../assets/data/homelist';
 import {
   BookOutlined,
   FileTextOutlined,
