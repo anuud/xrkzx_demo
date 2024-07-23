@@ -132,6 +132,7 @@ const AcdemySelect: FC<IProps> = () => {
       }));
     }
   };
+  console.log('🚀 ~ searchinfo:', searchinfo);
   return (
     <AcdemySelectWrapper>
       <div className="flex fiter-type  p-3 my-3 ml-2">
