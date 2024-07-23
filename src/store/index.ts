@@ -3,12 +3,14 @@ import { useSelector, useDispatch, TypedUseSelectorHook } from 'react-redux';
 import Homelist from '../views/home/store/home';
 import Schoollist from '../views/school/store/school';
 import Detaillist from '../views/detail/store/detail';
+import AcademList from '../views/academy/store/academy';
 
 const store = configureStore({
   reducer: {
     homelist: Homelist,
     schoollist: Schoollist,
-    detaillist: Detaillist
+    detaillist: Detaillist,
+    academlist: AcademList
   }
 });
 

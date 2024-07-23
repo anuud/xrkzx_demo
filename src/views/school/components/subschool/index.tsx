@@ -20,7 +20,7 @@ const SubSchool: FC<IProps> = (props) => {
         schoolInfo?.slice(0, 8).map((item) => {
           return (
             <div
-              key={item.id}
+              key={item.name}
               className="w-[24%] m-1 bg-white cread"
               onClick={() => changeNav(item.id)}
             >

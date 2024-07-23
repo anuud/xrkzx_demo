@@ -3,7 +3,6 @@ import type { ReactNode, FC } from 'react';
 import { AcdemySelectWrapper } from './styled';
 import { nanoid } from 'nanoid';
 import classNames from 'classnames';
-import Search from 'antd/es/input/Search';
 interface IProps {
   children?: ReactNode;
 }
@@ -14,28 +13,20 @@ const aplication = [
   },
   {
     _id: nanoid(),
-    name: '国际幼儿班'
+    name: '幼儿园'
   },
   {
     _id: nanoid(),
-    name: '国际小学'
+    name: '小学'
   },
   {
     _id: nanoid(),
-    name: '国际初中'
+    name: '初中'
   },
 
   {
     _id: nanoid(),
-    name: '国际高中'
-  },
-  {
-    _id: nanoid(),
-    name: '大学预科'
-  },
-  {
-    _id: nanoid(),
-    name: '学前'
+    name: '高中'
   }
 ];
 const course = [
@@ -53,41 +44,11 @@ const course = [
   },
   {
     _id: nanoid(),
-    name: '香港DSE课程'
+    name: 'DSE课程'
   },
   {
     _id: nanoid(),
     name: 'OSSD课程'
-  },
-  {
-    _id: nanoid(),
-    name: '其余课程'
-  }
-];
-const tuition = [
-  {
-    _id: nanoid(),
-    name: '全部'
-  },
-  {
-    _id: nanoid(),
-    name: '5万以下'
-  },
-  {
-    _id: nanoid(),
-    name: '5万-10万'
-  },
-  {
-    _id: nanoid(),
-    name: '11万-15万'
-  },
-  {
-    _id: nanoid(),
-    name: '15万-20万'
-  },
-  {
-    _id: nanoid(),
-    name: '20万以上'
   }
 ];
 const place = [
@@ -114,30 +75,63 @@ const place = [
   {
     _id: nanoid(),
     name: '龙华区'
-  },
-  {
-    _id: nanoid(),
-    name: '光明区'
-  },
-  {
-    _id: nanoid(),
-    name: '盐田区'
-  },
-  {
-    _id: nanoid(),
-    name: '砰山区'
-  },
-  {
-    _id: nanoid(),
-    name: '大鹏区'
   }
 ];
 const AcdemySelect: FC<IProps> = () => {
   const [activeId, setActiveId] = useState(0);
   const [courseId, setcourseId] = useState(0);
-  const [tuitionId, settuitionId] = useState(0);
   const [placeId, setplaceId] = useState(0);
+  const [searchinfo, setSearchinfo] = useState({
+    objectInfo: '',
+    course: '',
+    address: ''
+  });
 
+  const handleCourse = (index: number, course: string) => {
+    if (course) {
+      setSearchinfo((prevParams) => ({
+        ...prevParams,
+        course
+      }));
+    }
+    if (course === '全部') {
+      setSearchinfo((prevParams) => ({
+        ...prevParams,
+        course: ''
+      }));
+    }
+    setcourseId(index);
+  };
+
+  const handleAplicaction = (index: number, objectInfo: string) => {
+    console.log('🚀 ~ handleAplicaction ~ name:', objectInfo);
+    if (objectInfo) {
+      setSearchinfo((prevParams) => ({
+        ...prevParams,
+        objectInfo
+      }));
+    }
+    if (objectInfo === '全部') {
+      setSearchinfo((prevParams) => ({
+        ...prevParams,
+        objectInfo: ''
+      }));
+    }
+    setActiveId(index);
+  };
+  const handlePlace = (index: number, address: string) => {
+    setplaceId(index);
+    setSearchinfo((prevParams) => ({
+      ...prevParams,
+      address
+    }));
+    if (address === '全部') {
+      setSearchinfo((prevParams) => ({
+        ...prevParams,
+        address: ''
+      }));
+    }
+  };
   return (
     <AcdemySelectWrapper>
       <div className="flex fiter-type  p-3 my-3 ml-2">
@@ -150,7 +144,7 @@ const AcdemySelect: FC<IProps> = () => {
                 className={classNames(
                   `leading-8 mx-1 cursor-pointer ${index === activeId ? 'active' : ''}`
                 )}
-                onClick={() => setActiveId(index)}
+                onClick={() => handleAplicaction(index, item.name)}
               >
                 <span className="px-4 py-1 block h-full">{item.name}</span>
               </li>
@@ -168,31 +162,9 @@ const AcdemySelect: FC<IProps> = () => {
                 className={classNames(
                   `leading-8 mx-1 cursor-pointer ${index === courseId ? 'active' : ''}`
                 )}
-                onClick={() => setcourseId(index)}
+                onClick={() => handleCourse(index, item.name)}
               >
                 <span className="px-4 py-1 block h-full">{item.name}</span>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <div className="flex fiter-type p-3 my-3 ml-2">
-        <p className=" block text-base p-2 text-dark-50">一年费用:</p>
-        <ul className="flex text-xs">
-          {tuition.map((item, index) => {
-            return (
-              <li
-                key={item._id}
-                className={classNames(`leading-8 mx-1 cursor-pointer`)}
-                onClick={() => settuitionId(index)}
-              >
-                <span
-                  className={classNames(
-                    `px-4 py-1 block h-full ${index === tuitionId ? 'active' : ''}`
-                  )}
-                >
-                  {item.name}
-                </span>
               </li>
             );
           })}
@@ -206,7 +178,7 @@ const AcdemySelect: FC<IProps> = () => {
               <li
                 key={item._id}
                 className={classNames(`leading-8 mx-1 cursor-pointer`)}
-                onClick={() => setplaceId(index)}
+                onClick={() => handlePlace(index, item.name)}
               >
                 <span
                   className={classNames(
@@ -219,17 +191,6 @@ const AcdemySelect: FC<IProps> = () => {
             );
           })}
         </ul>
-      </div>
-      <div className="flex my-4">
-        <div className="flex-1"></div>
-        <div className="w-[30%] py-2 mb-2 mr-1">
-          <Search
-            placeholder="请输入学校名称搜索"
-            className="btn"
-            enterButton="搜索"
-            size="large"
-          />
-        </div>
       </div>
     </AcdemySelectWrapper>
   );
