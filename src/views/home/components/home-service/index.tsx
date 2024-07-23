@@ -2,8 +2,6 @@ import React from 'react';
 import type { ReactNode, FC } from 'react';
 import { HomeServiceWrapper } from './styled';
 import AreaCaption from '../../../../components/area-caption';
-import { useAppSelector } from '../../../../store';
-import { shallowEqual } from 'react-redux';
 interface IProps {
   children?: ReactNode;
 }
