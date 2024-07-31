@@ -44,7 +44,7 @@ const HomeClassify: FC<IProps> = () => {
   }, []);
   return (
     <HomeClassWrapper>
-      <div className="w-4/5 m-auto mt-7 bg-white">
+      <div className="mt-7 bg-white">
         <SectionsTabs tabNames={stytem} tabClick={tabClickHandle} />
         <div className="w-[100%]">
           {stystemlist &&
@@ -52,7 +52,7 @@ const HomeClassify: FC<IProps> = () => {
               return (
                 <div key={item.name} className="item">
                   <div className="flex justify-between my-4 w-[100%]">
-                    <div className="crad1-left w-[15%]">
+                    <div className="crad1-left lg:w-[15%] ">
                       <img src={item.school_stytem.stytem_icon} />
                     </div>
                     <div className="crad1-main w-[70%] pl-2">
@@ -108,7 +108,7 @@ const HomeClassify: FC<IProps> = () => {
                           src={item}
                           alt=""
                           key={item}
-                          style={{ width: '33.3%', marginRight: '10px', height: '100%' }}
+                          className="w-[33%] lg:mr-4 lg:h-[200px]"
                         />
                       );
                     })}

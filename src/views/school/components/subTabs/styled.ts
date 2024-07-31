@@ -9,6 +9,9 @@ export const SubTabsWrapper = styled.div`
   justify-content: space-between;
   height: 54px;
   line-height: 45px;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
   > h1 {
     margin-top: 10px;
     height: 26px;
@@ -31,6 +34,11 @@ export const SubTabsWrapper = styled.div`
   }
   > ul {
     height: 32px;
+  }
+  .tabs-items {
+    @media (max-width: 750px) {
+      display: none;
+    }
   }
   .item {
     padding: 4px 15px;

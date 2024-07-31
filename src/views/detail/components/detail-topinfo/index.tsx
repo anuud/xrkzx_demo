@@ -5,13 +5,24 @@ interface IProps {
   children?: ReactNode;
   name: string;
   istext?: string;
+  icon?: 'abstract' | 'information' | 'img';
 }
 const DetailTopinfo: FC<IProps> = (props) => {
-  const { name, istext } = props;
+  const { name, istext, icon } = props;
+  const Image = () => {
+    if (icon === 'abstract') {
+      return <img src={require('../../../../assets/images/skin/product14.png')} alt="" />;
+    } else if (icon === 'information') {
+      return <img src={require('../../../../assets/images/skin/product15.png')} alt="" />;
+    } else if (icon === 'img') {
+      return <img src={require('../../../../assets/images/skin/product19.png')} alt="" />;
+    }
+    return <img src={require('../../../../assets/images/skin/product14.png')} alt="" />;
+  };
   return (
     <DetailTopInfoWrapper>
       <i className="m-1 rounded-full border">
-        <img src={require('../../../../assets/images/school/product13.png')} alt="" />
+        <Image />
       </i>
       <div className="leading-[4rem] text-xl font-bold ml-1">
         <span className="text-black cursor-pointer item">

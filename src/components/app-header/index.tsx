@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import type { ReactNode, FC } from 'react';
 import headerTitles from '../../assets/data/header_titles.json';
+import headerIpone from '../../assets/data/header_ipone.json';
 import { AppHeaderWrapper, MainWrapper } from './styled';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 interface IProps {
@@ -37,14 +38,14 @@ const AppHeader: FC<IProps> = () => {
       {locations.pathname === '/home' && (
         <div className="w-full m-auto" ref={domRef} onClick={() => navgite('/signup')}>
           <img
-            src={require('../../assets/images/home/20240621102524.png')}
+            src={require('../../assets/images/home/nav.png')}
             alt=""
             style={{ width: '100%', height: '80px', margin: '0 auto' }}
           />
         </div>
       )}
-      <div className=" m-auto flex justify-between pt-2">
-        <div>
+      <div className="m-auto flex justify-between pt-2">
+        <div className="app-left">
           <a href="#">
             <img
               src={require('../../assets/images/1710834333725175.png')}
@@ -53,9 +54,18 @@ const AppHeader: FC<IProps> = () => {
             />
           </a>
         </div>
-        <MainWrapper className="main">
+        <MainWrapper>
           <div className="title-list">
             {headerTitles.map((item) => {
+              return (
+                <div className="item" key={item.title}>
+                  {showItem(item)}
+                </div>
+              );
+            })}
+          </div>
+          <div className="title-ipone">
+            {headerIpone.map((item) => {
               return (
                 <div className="item" key={item.title}>
                   {showItem(item)}

@@ -7,7 +7,7 @@ export const DetailWrapper = styled.div`
     background-image: url(${require('../../assets/images/1653034916455318.jpg')});
   }
   .detail-content {
-    width: 900px;
+    width: 70%;
     margin: 10px auto;
   }
 `;

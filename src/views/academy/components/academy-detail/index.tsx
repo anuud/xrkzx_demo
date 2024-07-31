@@ -14,9 +14,12 @@ const AcademyDetail: FC<IProps> = () => {
     (state) => ({ academList: state.academlist.academlist }),
     shallowEqual
   );
-  const onclick = (id: number) => {
-    nav(`/school/${id}`);
+  const onclick = (id: number, item: any) => {
+    nav(`/school/${item.school_id}`);
   };
+  function handlePageChange(page: number) {
+    console.log('🚀 ~ handlePageChange ~ page:', page);
+  }
   return (
     <AcademyDetailWrapper>
       <div>
@@ -59,7 +62,7 @@ const AcademyDetail: FC<IProps> = () => {
               <div className="w-[100px] flex justify-center items-center my-3">
                 <Button
                   style={{ backgroundColor: '#0973a3', color: 'white', height: '35px' }}
-                  onClick={() => onclick(item.id)}
+                  onClick={() => onclick(item.id, item)}
                 >
                   查看学校
                 </Button>
@@ -68,7 +71,7 @@ const AcademyDetail: FC<IProps> = () => {
           );
         })}
       <div className="flex justify-center py-5">
-        <Pagination defaultCurrent={0} total={academList.length} />
+        <Pagination defaultCurrent={0} total={academList.length} onChange={handlePageChange} />
       </div>
     </AcademyDetailWrapper>
   );

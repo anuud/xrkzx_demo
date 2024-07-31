@@ -13,6 +13,12 @@ export const SectionsTabsWrapper = styled.div`
     text-align: center;
     border: 0.5px solid #d8d8d8;
     white-space: nowrap;
+
+    @media (max-width: 768px) {
+      flex-basis: 90px;
+      font-size: 14px;
+      padding: 8px 10px;
+    }
     cursor: pointer;
     &.active {
       color: black;

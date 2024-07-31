@@ -8,7 +8,7 @@ interface IProps {
 const HomeCrad1: FC<IProps> = () => {
   return (
     <HomeCrad1Wrapper>
-      <div className="w-4/5 m-auto mt-7 bg-white item">
+      <div className="xl:w-4/5 m-auto mt-7 bg-white item">
         <div className="flex justify-between ">
           {HomeCard1?.map((item) => {
             return (
@@ -20,15 +20,17 @@ const HomeCrad1: FC<IProps> = () => {
           })}
         </div>
         <div className="flex">
-          <div className="flex-1 crad-left">
-            <h4 className="text-base font-bold p-2">入学诊断</h4>
-            <p className="p-2 text-blue-400">
+          <div className="flex-1 crad-left m-4">
+            <h4 className="text-base font-bold p-2 xs:text-center">入学诊断</h4>
+            <p className="p-2 text-blue-400 text-center">
               有哪些国际化学校？需要什么入学条件？快速找到适合孩子的学校
             </p>
           </div>
-          <div className="flex-1 crad-right ml-8">
-            <h4 className="text-base font-bold p-2">学校大全</h4>
-            <p className="p-2 text-blue-400">汇集各区国际高中、初中、小学、幼儿园等100+所学校</p>
+          <div className="flex-1 crad-right m-4 ">
+            <h4 className="xl:text-base font-bold p-2 xs:text-center">学校大全</h4>
+            <p className="p-2 text-blue-400 text-center">
+              汇集各区国际高中、初中、小学、幼儿园等100+所学校
+            </p>
           </div>
         </div>
         <div className="flex justify-around mt-8">
@@ -64,7 +66,7 @@ const HomeCrad1: FC<IProps> = () => {
           </div>
         </div>
         <div className="w-[100%] m-auto h-[500px] home-help">
-          <span className="absolute left-[43%] text-white font-bold text-xl bottom-[23%]">
+          <span className="absolute lg:left-[43%] xs:left-[36%] text-white font-bold text-xl bottom-[23%]">
             立即帮我找学校
           </span>
         </div>

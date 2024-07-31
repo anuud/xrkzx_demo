@@ -12,17 +12,19 @@ const SunFlower: FC<IProps> = () => {
     <SunFlowerWrapper>
       <div className="w-full m-auto">
         <TopBanner />
-        <div className="w-[70%] m-auto">
+        <div className="lg:w-[70%] xs:w-[100%] m-auto">
           <div className="flex mt-8">
             <div className="flex-1 crad-left">
-              <h4 className="text-base font-bold p-2">入学诊断</h4>
-              <p className="p-2 text-blue-400">
+              <h4 className="text-base font-bold p-2 text-center">入学诊断</h4>
+              <p className="p-2 text-blue-400 text-center">
                 有哪些国际化学校？需要什么入学条件？快速找到适合孩子的学校
               </p>
             </div>
-            <div className="flex-1 crad-right ml-20">
-              <h4 className="text-base font-bold p-2">学校大全</h4>
-              <p className="p-2 text-blue-400">汇集各区国际高中、初中、小学、幼儿园等100+所学校</p>
+            <div className="flex-1 crad-right lg:ml-20">
+              <h4 className="text-base font-bold p-2 text-center">学校大全</h4>
+              <p className="p-2 text-blue-400 text-center">
+                汇集各区国际高中、初中、小学、幼儿园等100+所学校
+              </p>
             </div>
           </div>
           <div className="flex justify-around mt-4">
@@ -55,7 +57,7 @@ const SunFlower: FC<IProps> = () => {
             </div>
           </div>
         </div>
-        <div className="mb-5 w-[60%] m-auto mt-5">
+        <div className="mb-5 lg:w-[60%] m-auto mt-5">
           <span className="font-bold block py-2">找国际化学校问小葵</span>
           <div className="lay">
             <div className="stop">
@@ -86,16 +88,17 @@ const SunFlower: FC<IProps> = () => {
               </div>
               <div className="w-[50%] m-auto pb-4">
                 <Space>
-                  <Button type="primary" icon={<SearchOutlined />} style={{ width: '200px' }}>
+                  <Button
+                    type="primary"
+                    icon={<SearchOutlined />}
+                    className="lg:w-[200px] xs:w-[110px]"
+                  >
                     帮我找
                   </Button>
                   <Button
                     type="primary"
                     icon={<WhatsAppOutlined />}
-                    style={{
-                      width: '200px',
-                      backgroundColor: ' rgb(255, 131, 47)'
-                    }}
+                    className="lg:w-[200px] bg-orange-400 xs:w-[110px]"
                   >
                     在线咨询
                   </Button>

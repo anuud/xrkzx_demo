@@ -18,7 +18,8 @@ const HeaderLayout: FC<IProps> = () => {
         backgroundColor: 'white',
         position: 'sticky',
         top: 0,
-        zIndex: '999'
+        zIndex: '999',
+        padding: 0
       }}
     >
       <AppHeader />

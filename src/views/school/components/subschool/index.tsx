@@ -21,7 +21,7 @@ const SubSchool: FC<IProps> = (props) => {
           return (
             <div
               key={item.name}
-              className="w-[24%] m-1 bg-white cread"
+              className="lg:w-[24%] xs:w-[48%] m-1 bg-white cread"
               onClick={() => changeNav(item.id)}
             >
               <div>

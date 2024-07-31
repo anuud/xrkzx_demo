@@ -6,6 +6,9 @@ export const SubChoolWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 22px;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
   .cread {
     &:hover {
       box-shadow: 0px 0px 0px 1px #999;

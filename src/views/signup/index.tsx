@@ -73,7 +73,7 @@ const Signup: FC<IProps> = () => {
             181-8861-8942
           </a>
         </div>
-        <img src={require('../../assets/images/baoming/y-ban3.jpg')} alt="" />
+        <img src={require('../../assets/images/signup.png')} alt="" />
         <div className="signup-item bg-gray-300 p-4">
           <h1 className=" leading-9 text-center text-xl p-4">立即报名国际学校择校展</h1>
           <Form form={form} onFinish={(e) => changbtnfrom(e)}>

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "首页",
+    "type": "path",
+    "link": "/home"
+  },
+  {
+    "title": "找学校",
+    "type": "path",
+    "link": "/school"
+  },
+  {
+    "title": "探校",
+    "type": "path",
+    "link": "/sunflower"
+  },
+  {
+    "title": "关于我们",
+    "type": "path",
+    "link": "/about"
+  },
+  {
+    "title": "院校库",
+    "type": "path",
+    "link": "/academy"
+  }
+]

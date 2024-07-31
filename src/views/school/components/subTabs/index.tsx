@@ -44,7 +44,7 @@ const SubTitle: FC<IProps> = (props) => {
     <SubTabsWrapper>
       <h1>{name}国际学校</h1>
       <div className="h-[32px]">
-        <ul className="flex">
+        <ul className="flex tabs-items">
           {courseInfo.map((item: any) => {
             return (
               <li key={item._id}>
@@ -56,7 +56,7 @@ const SubTitle: FC<IProps> = (props) => {
           })}
         </ul>
       </div>
-      <span onClick={() => handlecNav()}>
+      <span onClick={() => handlecNav()} className="tabs-right">
         更多学校
         <RightOutlined />
       </span>
