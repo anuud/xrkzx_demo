@@ -40,7 +40,7 @@ const AppHeader: FC<IProps> = () => {
           <img
             src={require('../../assets/images/home/nav.png')}
             alt=""
-            style={{ width: '100%', height: '80px', margin: '0 auto' }}
+            className="w-full lg:h-[80px] xs:h-[28px]"
           />
         </div>
       )}
