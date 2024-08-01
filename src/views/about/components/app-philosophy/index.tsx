@@ -11,7 +11,7 @@ const AppPhilosophy: FC<IProps> = () => {
     <AppPhilosophyWrapper>
       <div className="w-4/5 m-auto">
         <AreaHeader topheader="Service Advantage" abstract="服务优势" />
-        <div className="flex justify-between h-80">
+        <div className="flex lg:justify-between lg:h-80 xs:flex-wrap xs:justify-center xs:items-center">
           {Advantage?.map((item) => {
             return (
               <div key={item.title} className="border active">

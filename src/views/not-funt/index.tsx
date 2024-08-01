@@ -15,7 +15,7 @@ const NotFunt: FC<IProps> = () => {
         title="404"
         subTitle="对不起，您访问的页面不存在."
         extra={
-          <Button type="primary" onClick={() => navgite('/home')}>
+          <Button style={{ backgroundColor: '#faad14' }} onClick={() => navgite('/home')}>
             返回首页
           </Button>
         }

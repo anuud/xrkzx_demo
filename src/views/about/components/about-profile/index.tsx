@@ -24,8 +24,8 @@ const AboutProfile: FC<IProps> = () => {
         </div>
         <div className="w-full mt-5">
           <AreaHeader topheader="CORPORATE PHILOSPHY" abstract="企业理念" />
-          <div className="flex justify-between mb-5 mt-2">
-            <div className="w-1/2 p-5 bg-slate-300 ">
+          <div className="lg:flex justify-between mb-5 mt-2">
+            <div className="lg:w-1/2 p-5 bg-slate-300 xs:w-[100%]">
               <span className="block text-sm font-medium leading-8">品牌及价值观：</span>
               <span className="font-black leading-8">对学员有帮助的，就是对的</span>
               <p className="leading-4">
@@ -35,7 +35,7 @@ const AboutProfile: FC<IProps> = () => {
                 珍惜品牌声誉，倾听每一位学员的声音，包括学员的赞誉和抱怨，用心为学员设计、规划最适合的学习方案。在YuLoo，我们常常要求员工假设：如果我是学生或家长，我希望得到什么样的咨询服务和帮助？
               </p>
             </div>
-            <div className="w-1/2 p-5 bg-slate-300 ml-1 leading-6">
+            <div className="lg:w-1/2 p-5 bg-slate-300 lg:ml-1 leading-6 xs:w-[100%]">
               <p className="block text-sm font-medium leading-8 ">产品及服务：</p>
               <p className="font-black leading-8"> 如果您有不满意 那一定是我们做的还不够好</p>
               <p className="leading-6">

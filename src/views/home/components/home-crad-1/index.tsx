@@ -66,7 +66,7 @@ const HomeCrad1: FC<IProps> = () => {
           </div>
         </div>
         <div className="w-[100%] m-auto h-[500px] home-help">
-          <span className="absolute lg:left-[43%] xs:left-[36%] text-white font-bold text-xl bottom-[23%]">
+          <span className="absolute lg:left-[43%] xs:left-[35%] text-white font-bold text-xl bottom-[22%]">
             立即帮我找学校
           </span>
         </div>

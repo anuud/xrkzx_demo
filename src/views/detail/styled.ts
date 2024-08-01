@@ -9,5 +9,8 @@ export const DetailWrapper = styled.div`
   .detail-content {
     width: 70%;
     margin: 10px auto;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 `;

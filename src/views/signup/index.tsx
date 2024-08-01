@@ -97,6 +97,9 @@ const Signup: FC<IProps> = () => {
           </Form>
         </div>
         <div className="h-[830px] signup-bg">
+          <img src={require('../../assets/images/20240731154606.jpg')} />
+        </div>
+        {/* <div className="h-[830px] signup-bg">
           <h3 className="text-center text-xl font-bold py-3">向日葵择校介绍</h3>
           <h4 className="text-sm text-gray-300 text-center">关于向日葵择校平台</h4>
           <img src={require('../../assets/images/baoming/jieshao.png')} alt="" className="py-2" />
@@ -114,7 +117,7 @@ const Signup: FC<IProps> = () => {
               <p className="text-center">关注公众号</p>
             </div>
           </div>
-        </div>
+        </div> */}
         <div>
           <h3 className="text-xl font-bold text-center pt-4">择校我们是认真的</h3>
           <h4 className="text-center text-sm py-1">累计以帮助10000+位学生进入目标学校</h4>
