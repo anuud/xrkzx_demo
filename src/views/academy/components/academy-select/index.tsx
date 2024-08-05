@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import type { ReactNode, FC } from 'react';
 import { AcdemySelectWrapper } from './styled';
 import { nanoid } from 'nanoid';
 import classNames from 'classnames';
+import { useAppDispatch } from '../../../../store';
+import { fetchAcademylistAction } from '../../store/academy';
 interface IProps {
   children?: ReactNode;
 }
@@ -48,7 +50,11 @@ const course = [
   },
   {
     _id: nanoid(),
-    name: 'OSSD课程'
+    name: 'AP课程'
+  },
+  {
+    _id: nanoid(),
+    name: 'IB课程'
   }
 ];
 const place = [
@@ -78,6 +84,7 @@ const place = [
   }
 ];
 const AcdemySelect: FC<IProps> = () => {
+  const dispach = useAppDispatch();
   const [activeId, setActiveId] = useState(0);
   const [courseId, setcourseId] = useState(0);
   const [placeId, setplaceId] = useState(0);
@@ -104,7 +111,6 @@ const AcdemySelect: FC<IProps> = () => {
   };
 
   const handleAplicaction = (index: number, objectInfo: string) => {
-    console.log('🚀 ~ handleAplicaction ~ name:', objectInfo);
     if (objectInfo) {
       setSearchinfo((prevParams) => ({
         ...prevParams,
@@ -117,6 +123,7 @@ const AcdemySelect: FC<IProps> = () => {
         objectInfo: ''
       }));
     }
+
     setActiveId(index);
   };
   const handlePlace = (index: number, address: string) => {
@@ -132,7 +139,9 @@ const AcdemySelect: FC<IProps> = () => {
       }));
     }
   };
-  console.log('🚀 ~ searchinfo:', searchinfo);
+  useEffect(() => {
+    dispach(fetchAcademylistAction(searchinfo));
+  }, [searchinfo]);
   return (
     <AcdemySelectWrapper>
       <div className="flex fiter-type  p-3 my-3 ml-2">

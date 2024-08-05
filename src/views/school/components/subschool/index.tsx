@@ -21,7 +21,7 @@ const SubSchool: FC<IProps> = (props) => {
           return (
             <div
               key={item.name}
-              className="lg:w-[24%] xs:w-[48%] m-1 bg-white cread"
+              className="lg:w-[24%] xs:w-[47.5%] m-1 bg-white cread"
               onClick={() => changeNav(item.id)}
             >
               <div>
@@ -35,7 +35,6 @@ const SubSchool: FC<IProps> = (props) => {
                   <div className="m-1 h-[44px]">
                     招生对象：{' '}
                     {item.object_info.map((list: any) => {
-                      // eslint-disable-next-line react/jsx-key
                       return (
                         <Tag color="magenta" key={list}>
                           {list}

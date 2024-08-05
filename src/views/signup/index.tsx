@@ -118,11 +118,11 @@ const Signup: FC<IProps> = () => {
             </div>
           </div>
         </div> */}
-        <div>
+        {/* <div>
           <h3 className="text-xl font-bold text-center pt-4">择校我们是认真的</h3>
           <h4 className="text-center text-sm py-1">累计以帮助10000+位学生进入目标学校</h4>
           <img src={require('../../assets/images/baoming/dibu.jpg')} alt="" />
-        </div>
+        </div> */}
         <div className="footer">
           <ul className="flex justify-center text-gray-400">
             <li className="p-1">择校计划 |</li>

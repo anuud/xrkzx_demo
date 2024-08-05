@@ -1,11 +1,26 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getSerach } from '../service/academy';
 
+type searchinfo = {
+  objectInfo: string;
+  course: string;
+  address: string;
+};
+
 export const fetchAcademyDataAction = createAsyncThunk('fetchdata', (params, { dispatch }) => {
   getSerach(params).then((res) => {
     dispatch(changeAcademAction(res.data));
   });
 });
+export const fetchAcademylistAction = createAsyncThunk(
+  'fetchdata',
+  (params: searchinfo, { dispatch }) => {
+    getSerach(params).then((res) => {
+      dispatch(changeAcademAction(res.data));
+    });
+  }
+);
+
 interface AcademlistState {
   academlist: any[];
 }

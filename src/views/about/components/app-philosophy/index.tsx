@@ -11,13 +11,16 @@ const AppPhilosophy: FC<IProps> = () => {
     <AppPhilosophyWrapper>
       <div className="w-4/5 m-auto">
         <AreaHeader topheader="Service Advantage" abstract="服务优势" />
-        <div className="flex lg:justify-between lg:h-80 xs:flex-wrap xs:justify-center xs:items-center">
+        <div className="flex lg:justify-between xs:flex-wrap xs:justify-center xs:items-center">
           {Advantage?.map((item) => {
             return (
-              <div key={item.title} className="border active">
+              <div
+                key={item.title}
+                className="border active lg:w-[19.9%] lg:h-[280px] xs:w-[100%] "
+              >
                 <img src={item.url} className=" block m-auto pt-12 p-3" />
                 <h3 className=" block text-center leading-10 text-xl p-3">{item.title}</h3>
-                <p className=" leading-10 p-3">{item?.desc}</p>
+                <div className="text-center">{item?.desc}</div>
               </div>
             );
           })}

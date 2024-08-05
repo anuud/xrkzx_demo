@@ -1,7 +1,7 @@
 /** @type {import ('cz-git').UserConfig} */
-// eslint-disable-next-line no-undef
+
 module.exports = {
-  extends: ['@commitlint/config-conventional'], // extends can be nested
+  extends: ['@commitlint/config-conventional'],
   parserPreset: 'conventional-changelog-conventionalcommits',
   prompt: {
     settings: {},
@@ -89,4 +89,4 @@ module.exports = {
       }
     }
   }
-}
+};

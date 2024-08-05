@@ -19,7 +19,7 @@ const Advantage = [
     url: `${require('../../assets/images/icon-08.png')}`
   },
   {
-    title: '上千家实力教育机构',
+    title: '上千家实力教育机构呀',
     desc: '高水准师资、高保障教学,为你解决后顾之忧',
     url: `${require('../../assets/images/icon-09.png')}`
   }

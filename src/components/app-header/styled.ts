@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const AppHeaderWrapper = styled.div`
   width: 100%;
-  /* @media (max-width: 768px) {
-    display: none;
-  } */
+  @media (max-width: 768px) {
+    padding: 0;
+  }
   .header {
     width: 100%;
     height: 89px;
@@ -45,10 +45,11 @@ export const AppHeaderWrapper = styled.div`
 `;
 export const MainWrapper = styled.div`
   display: flex;
+
   .title-list {
     display: flex;
     line-height: 70px;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     padding: 5px;
     @media (max-width: 768px) {
@@ -90,21 +91,26 @@ export const MainWrapper = styled.div`
   }
   .title-ipone {
     display: flex;
-    line-height: 70px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     padding: 5px;
+    height: 50px;
+
     @media (min-width: 768px) {
       display: none;
     }
     .item {
       position: relative;
+      height: 50px;
 
       a {
         display: block;
-        padding: 0 16px;
+        padding: 0 12px;
+        @media (max-width: 768px) {
+          padding: 0 9px !important;
+        }
         color: #333;
-        font-size: 17px;
+        font-size: 14px;
       }
 
       :last-of-type a {

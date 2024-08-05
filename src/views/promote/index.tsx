@@ -32,14 +32,14 @@ const Promote: FC<IProps> = () => {
     <PromoteWrapper>
       <div>
         <img src={require('../../assets/images/promote/toplogo.png')} alt="" />
-        <div className="text-xl leading-[3.5rem] font-bold text-center text-blue-400">
+        <div className="text-xl leading-[3.5rem] font-bold text-center text-blue-400 ">
           双语/DSE/外籍等国际话学校入学有哪些门槛
         </div>
-        <div className="flex">
+        <div className="flex flex-wrap">
           <img
             src={require('../../assets/images/promote/course_2.png')}
             alt=""
-            className="m-auto "
+            className="m-auto"
           />
           <img
             src={require('../../assets/images/promote/course_3.png')}
@@ -55,7 +55,7 @@ const Promote: FC<IProps> = () => {
           />
         </div>
       </div>
-      <div className="flex">
+      <div className="flex flex-wrap">
         <img src={require('../../assets/images/promote/course_5.RnhlAebv.png')} alt="" />
         <img
           src={require('../../assets/images/promote/course_6.soPz2Lxj.png')}
