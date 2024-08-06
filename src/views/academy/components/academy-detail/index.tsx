@@ -59,7 +59,7 @@ const AcademyDetail: FC<IProps> = () => {
                   <span>{item.introduce}</span>
                 </div>
               </div>
-              <div className="w-[100px] flex justify-center items-center my-3">
+              <div className="w-[100px] flex justify-center items-center my-3 btn">
                 <Button
                   style={{ backgroundColor: '#0973a3', color: 'white', height: '35px' }}
                   onClick={() => onclick(item.id, item)}

@@ -144,7 +144,7 @@ const AcdemySelect: FC<IProps> = () => {
   }, [searchinfo]);
   return (
     <AcdemySelectWrapper>
-      <div className="flex fiter-type  p-3 my-3 ml-2">
+      <div className="lg:flex fiter-type p-3 my-3 ml-2">
         <p className=" block text-base p-2 text-dark-50">招生对象:</p>
         <ul className="flex text-xs ">
           {aplication.map((item, index) => {
@@ -162,7 +162,7 @@ const AcdemySelect: FC<IProps> = () => {
           })}
         </ul>
       </div>
-      <div className="flex fiter-type p-3 my-3 ml-2">
+      <div className="lg:flex fiter-type p-3 my-3 ml-2">
         <p className=" block text-base p-2 text-dark-50">课程体系:</p>
         <ul className="flex text-xs">
           {course.map((item, index) => {
@@ -180,7 +180,7 @@ const AcdemySelect: FC<IProps> = () => {
           })}
         </ul>
       </div>
-      <div className="flex flex-wrap fiter-type p-3 my-3 ml-2">
+      <div className="lg:flex flex-wrap fiter-type p-3 my-3 ml-2">
         <p className=" block text-base p-2 text-dark-50">学校位置:</p>
         <ul className="flex text-xs">
           {place.map((item, index) => {
