@@ -32,7 +32,7 @@ export const SunFlowerWrapper = styled.div`
       padding: 24px 16px;
     }
     .top-avatar {
-      background: url(${require('../../assets/images/logo.png')}) no-repeat 50%;
+      background: url(${require('../../assets/images/xiaokui.png')}) no-repeat 50%;
       background-color: #ecf5ff;
       background-size: 100% 100%;
       border: 1px solid #dce7ff;

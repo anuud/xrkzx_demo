@@ -28,7 +28,7 @@ const AcademyDetail: FC<IProps> = () => {
       {academList &&
         academList.slice(0, 10).map((item) => {
           return (
-            <div key={item.name} className="flex item">
+            <div key={item.id} className="flex item">
               <div className="my-3 flex justify-center items-center">
                 <img src={item.school_icon} alt="" className="w-[220px] p-1" />
               </div>

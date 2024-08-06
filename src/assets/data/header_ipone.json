@@ -15,6 +15,11 @@
     "link": "/sunflower"
   },
   {
+    "title": "课程提升",
+    "type": "path",
+    "link": "/promote"
+  },
+  {
     "title": "关于我们",
     "type": "path",
     "link": "/about"
@@ -23,10 +28,5 @@
     "title": "院校库",
     "type": "path",
     "link": "/academy"
-  },
-  {
-    "title": "课程提升",
-    "type": "path",
-    "link": "/promote"
   }
 ]

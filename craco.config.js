@@ -13,17 +13,17 @@ module.exports = {
       }
     }
   ],
-  // devServer: {
-  //   proxy: {
-  //     '/api': {
-  //       target: 'http://47.76.67.195:8000',
-  //       changeOrigin: true,
-  //       pathRewrite: {
-  //         '^/api': ''
-  //       }
-  //     }
-  //   }
-  // },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://47.76.67.195:8000',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    }
+  },
   alias: {
     '@': path.resolve(__dirname, 'src')
   }
