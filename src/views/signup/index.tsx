@@ -12,6 +12,7 @@ type SignupData = {
   name: string;
   phone: number;
   grade: string;
+  theacher?: string;
 };
 const fetchDataAsync = createAsyncThunk('fetchdata', async (Applaydata: SignupData) => {
   try {
@@ -26,8 +27,8 @@ const Signup: FC<IProps> = () => {
   const [form] = Form.useForm();
   const [messageApi, contextHolder] = message.useMessage();
   const changbtnfrom = (e: any) => {
-    const { name, phone, grade } = e;
-    dispatch(fetchDataAsync({ name, phone, grade }));
+    const { name, phone, grade, theacher } = e;
+    dispatch(fetchDataAsync({ name, phone, grade, theacher }));
     messageApi.open({
       type: 'success',
       content: '提交成功',
@@ -61,7 +62,7 @@ const Signup: FC<IProps> = () => {
     <SignupWrapper>
       {contextHolder}
       <div className=" lg:w-[750px] m-auto xs:w-[375px] bg-white">
-        <div className="flex justify-between">
+        {/* <div className="flex justify-between">
           <a href="#">
             <img
               src={require('../../assets/images/1710834333725175.png')}
@@ -72,7 +73,7 @@ const Signup: FC<IProps> = () => {
           <a href="tel:181-8861-8942" target="_blank" rel="noopener noreferrer" className="image">
             181-8861-8942
           </a>
-        </div>
+        </div> */}
         <img src={require('../../assets/images/signup.png')} alt="" />
         <div className="signup-item bg-gray-300 p-4">
           <h1 className=" leading-9 text-center text-xl p-4">立即报名国际学校择校展</h1>
@@ -85,6 +86,12 @@ const Signup: FC<IProps> = () => {
             </Form.Item>
             <Form.Item name="grade" rules={[{ required: true, validator: validateGrade }]}>
               <Input placeholder="在读年级" style={{ height: '50px' }} />
+            </Form.Item>
+            <Form.Item name="theacher">
+              <Input
+                placeholder="填写邀请老师的名字，如果没有老师邀请的可以不填 ！"
+                style={{ height: '50px' }}
+              />
             </Form.Item>
             <Form.Item>
               <Button
