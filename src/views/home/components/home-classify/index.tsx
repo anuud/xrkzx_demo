@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import type { ReactNode, FC } from 'react';
 import SectionsTabs from '../../../../components/section-tabs';
 import { useAppDispatch, useAppSelector } from '../../../../store';
@@ -6,8 +6,9 @@ import { shallowEqual } from 'react-redux';
 import { fetchHomeStystemDataAction } from '../../store/home';
 import { nanoid } from 'nanoid';
 import { HomeClassWrapper } from './styled';
-import { Tag } from 'antd';
-import { FolderOpenOutlined, MessageOutlined, RightOutlined } from '@ant-design/icons';
+import { Modal, Tag } from 'antd';
+import { MessageOutlined, RightOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 interface IProps {
   children?: ReactNode;
 }
@@ -30,7 +31,10 @@ const stytem = [
   }
 ];
 const HomeClassify: FC<IProps> = () => {
+  const [open, setOpen] = useState(false);
+  const [confirmLoading, setConfirmLoading] = useState(false);
   const dispatch = useAppDispatch();
+  const navgite = useNavigate();
   const { stystemlist } = useAppSelector(
     (state) => ({ stystemlist: state.homelist.stystemlist }),
     shallowEqual
@@ -42,6 +46,20 @@ const HomeClassify: FC<IProps> = () => {
   useEffect(() => {
     dispatch(fetchHomeStystemDataAction('分层教学'));
   }, []);
+
+  const showModal = () => {
+    setOpen(true);
+  };
+  const handleOk = () => {
+    setConfirmLoading(true);
+    setTimeout(() => {
+      setOpen(false);
+      setConfirmLoading(false);
+    }, 100);
+  };
+  const handleCancel = () => {
+    setOpen(false);
+  };
   return (
     <HomeClassWrapper>
       <div className="mt-7 bg-white">
@@ -56,7 +74,12 @@ const HomeClassify: FC<IProps> = () => {
                       <img src={item.school_stytem.stytem_icon} />
                     </div>
                     <div className="crad1-main w-[70%] pl-2">
-                      <h1 className="text-base font-bold">{item.name}</h1>
+                      <h1
+                        className="text-base font-bold cursor-pointer"
+                        onClick={() => navgite(`/school/${item.id}`)}
+                      >
+                        {item.name}
+                      </h1>
                       <div className="flex">
                         <h5 className="flex leading-7">
                           <img
@@ -91,12 +114,11 @@ const HomeClassify: FC<IProps> = () => {
                       </div>
                     </div>
                     <div className="crad1-right w-[15%]">
-                      <span className="flex p-2 crad1-right-item">
-                        <FolderOpenOutlined style={{ marginLeft: '15%' }} />
-                        <h1 className="ml-2">领取资料</h1>
-                      </span>
-                      <span className="flex p-2 mt-2 bg-blue-400">
-                        <MessageOutlined style={{ marginLeft: '15%' }} />
+                      <span
+                        className="flex p-2 mt-2 bg-blue-400 justify-center items-center cursor-pointer"
+                        onClick={() => showModal()}
+                      >
+                        <MessageOutlined />
                         <h1 className="ml-2">在线咨询</h1>
                       </span>
                     </div>
@@ -124,6 +146,22 @@ const HomeClassify: FC<IProps> = () => {
           </span>
         </div>
       </div>
+      <Modal
+        title="添加小葵微信咨询哦"
+        open={open}
+        onOk={handleOk}
+        okText="确定"
+        cancelText="取消"
+        confirmLoading={confirmLoading}
+        onCancel={handleCancel}
+      >
+        <div className="flex justify-center">
+          <img
+            src={require('../../../../assets/images/xiaokui.jpg')}
+            style={{ width: '200px', height: '200px' }}
+          />
+        </div>
+      </Modal>
     </HomeClassWrapper>
   );
 };

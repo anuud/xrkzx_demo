@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { ReactNode, FC } from 'react';
 import { HomeCrad1Wrapper } from './styled';
 import { HomeCard1 } from '../../../../assets/data/home-crad1';
+import { Modal } from 'antd';
 interface IProps {
   children?: ReactNode;
 }
 const HomeCrad1: FC<IProps> = () => {
+  const [visible, setVisible] = useState(false);
+
+  const handleOk = () => {
+    // 处理确认逻辑
+    setVisible(false);
+  };
+
+  const handleCancel = () => {
+    // 处理取消逻辑
+    setVisible(false);
+  };
+
   return (
     <HomeCrad1Wrapper>
       <div className="xl:w-4/5 m-auto mt-7 bg-white item">
@@ -66,10 +79,22 @@ const HomeCrad1: FC<IProps> = () => {
           </div>
         </div>
         <div className="w-[100%] m-auto h-[500px] home-help">
-          <span className="absolute lg:left-[43%] xs:left-[35%] text-white font-bold text-xl bottom-[22%]">
+          <button
+            className="absolute p-3 cursor-pointer bg-red-700 rounded-md lg:left-[43%] xs:left-[35%] text-white font-bold text-xl bottom-[22%]"
+            onClick={() => setVisible(true)}
+          >
             立即帮我找学校
-          </span>
+          </button>
         </div>
+        <Modal
+          title="请添加小葵微信进行咨询哦"
+          open={visible}
+          onOk={handleOk}
+          onCancel={handleCancel}
+          footer={null} // 取消默认的确认和取消按钮
+        >
+          <img src={require('../../../../assets/images/xiaokui.jpg')} />
+        </Modal>
       </div>
     </HomeCrad1Wrapper>
   );
