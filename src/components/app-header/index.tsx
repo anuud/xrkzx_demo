@@ -40,11 +40,11 @@ const AppHeader: FC<IProps> = () => {
           <img
             src={require('../../assets/images/home/nav.png')}
             alt=""
-            className="w-full lg:h-[80px] xs:h-[32px]"
+            className="w-full lg:h-[85px] xs:h-[32px]"
           />
         </div>
       )}
-      <div className="m-auto flex justify-between pt-2">
+      <div className="m-auto flex justify-between ">
         <div className="app-left">
           <a href="#">
             <img

@@ -8,7 +8,7 @@ export const HomeCrad1Wrapper = styled.div`
   }
   .crad-left {
     height: 400px;
-    background-image: url(${require('../../../../assets/images/home/515f1c13cdda03c8a29b1031397deadb18787883.png')});
+    background-image: url(${require('../../../../assets/images/home/5sd5dxa.png')});
     background-size: cover;
     background-position: center;
     @media (max-width: 768px) {
@@ -16,7 +16,7 @@ export const HomeCrad1Wrapper = styled.div`
     }
   }
   .crad-right {
-    background-image: url(${require('../../../../assets/images/home/553c3ebe2778f98d8be88e3429e396fe62651b87.png')});
+    background-image: url(${require('../../../../assets/images/home/d7a98sda8d7ada8.png')});
     background-size: cover;
     background-position: center;
     height: 400px;

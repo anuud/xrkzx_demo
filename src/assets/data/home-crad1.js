@@ -4,7 +4,7 @@ export const HomeCard1 = [
   {
     _id: nanoid(),
     text: '国际高中',
-    image_url: `${require('../images/home/school_time.png')}`
+    image_url: `${require('../images/home/icons6.png')}`
   },
   {
     _id: nanoid(),
@@ -13,8 +13,13 @@ export const HomeCard1 = [
   },
   {
     _id: nanoid(),
+    text: '香港DSE课程',
+    image_url: `${require('../images/home/icons1.png')}`
+  },
+  {
+    _id: nanoid(),
     text: '幼升小',
-    image_url: `${require('../images/home/school_bag.png')}`
+    image_url: `${require('../images/home/icons5.png')}`
   },
   {
     _id: nanoid(),
