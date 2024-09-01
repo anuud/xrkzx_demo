@@ -17,7 +17,7 @@ const HeaderLayout: FC<IProps> = () => {
       <Header
         className="Mobi"
         style={{
-          height: `${locations.pathname === '/home' ? '169px' : `89px`}`,
+          height: `${locations.pathname === '/home' ? '185px' : `89px`}`,
           backgroundColor: 'white',
           position: 'sticky',
           top: 0,

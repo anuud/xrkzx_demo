@@ -4,6 +4,7 @@ import headerTitles from '../../assets/data/header_titles.json';
 import headerIpone from '../../assets/data/header_ipone.json';
 import { AppHeaderWrapper, MainWrapper } from './styled';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { PhoneOutlined } from '@ant-design/icons';
 interface IProps {
   children?: ReactNode;
 }
@@ -40,7 +41,7 @@ const AppHeader: FC<IProps> = () => {
           <img
             src={require('../../assets/images/home/nav.png')}
             alt=""
-            className="w-full lg:h-[85px] xs:h-[32px]"
+            className="w-full lg:h-[100px] xs:h-[40px]"
           />
         </div>
       )}
@@ -50,7 +51,7 @@ const AppHeader: FC<IProps> = () => {
             <img
               src={require('../../assets/images/1710834333725175.png')}
               alt=""
-              className="w-40 mt-2"
+              className="w-40"
             />
           </a>
         </div>
@@ -75,8 +76,13 @@ const AppHeader: FC<IProps> = () => {
           </div>
         </MainWrapper>
         <div className="head-tel">
-          <p>181-8861-8942</p>
-          <p className="text">好教育就选向日葵择校</p>
+          <div className="flex justify-center items-center mr-1">
+            <PhoneOutlined style={{ fontSize: '28px', color: '#f09f09' }} />
+          </div>
+          <div>
+            <p>181-8861-8942</p>
+            <p className="text">好教育就选向日葵择校</p>
+          </div>
         </div>
       </div>
     </AppHeaderWrapper>

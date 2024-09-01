@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HomeWrapper = styled.div`
-  background-color: white;
+  background-color: #f3f3f3;
 
   > .content {
     .about {

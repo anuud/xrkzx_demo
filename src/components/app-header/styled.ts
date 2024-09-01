@@ -18,23 +18,27 @@ export const AppHeaderWrapper = styled.div`
     @media (max-width: 768px) {
       display: none;
     }
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .head-tel {
-    padding-left: 35px;
-    background: url(${require('../../assets/images/phone.png')}) no-repeat left center;
+    padding-left: 38px;
+    font-weight: 700;
+    display: flex;
     @media (max-width: 768px) {
       display: none;
     }
-    > p {
-      color: #c69245;
+    > div p {
+      color: #f09f09;
       text-align: center;
       line-height: 7px;
-      font-size: 18px;
+      font-size: 20px;
       padding-top: 22px;
     }
-    > .text {
-      font-size: 14px;
-      width: 140px;
+    > div .text {
+      font-size: 15px;
+      width: 150px;
     }
   }
   .content {
@@ -72,10 +76,10 @@ export const MainWrapper = styled.div`
 
       &:hover a,
       .active {
-        color: #156240;
+        color: rgb(85, 172, 238);
         /* background: #e4feed; */
         text-decoration: none;
-        border-bottom: 2px solid #156240;
+        border-bottom: 2px solid rgb(85, 172, 238);
       }
 
       .active .icon {

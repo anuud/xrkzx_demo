@@ -30,7 +30,6 @@ const Detail: FC<IProps> = () => {
     }),
     shallowEqual
   );
-
   useEffect(() => {
     dispatch(fetchDetailDataAction(id));
   }, [id]);
@@ -40,7 +39,15 @@ const Detail: FC<IProps> = () => {
         detailInfo.map((item) => {
           return (
             <div key={item.name}>
-              <div className="detail-banner flex justify-center items-center text-center text-2xl text-white font-bold">
+              <div
+                className="detail-banner flex justify-center items-center text-center text-2xl text-white font-bold"
+                style={{
+                  backgroundImage: `url(${item?.campus[0].shool_image}) `,
+                  width: '100%',
+                  height: '500px',
+                  backgroundSize: '100% 100%'
+                }}
+              >
                 {item.name}
               </div>
               <div className="detail-content">

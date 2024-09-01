@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import type { ReactNode, FC } from 'react';
 import { HomeCrad1Wrapper } from './styled';
-import { HomeCard1 } from '../../../../assets/data/home-crad1';
 import { Modal } from 'antd';
 interface IProps {
   children?: ReactNode;
@@ -22,7 +21,7 @@ const HomeCrad1: FC<IProps> = () => {
   return (
     <HomeCrad1Wrapper>
       <div className="xl:w-4/5 m-auto mt-7 bg-white item">
-        <div className="flex justify-between ">
+        {/* <div className="flex justify-between ">
           {HomeCard1?.map((item) => {
             return (
               <div className="mb-4 text-center" key={item._id}>
@@ -31,15 +30,12 @@ const HomeCrad1: FC<IProps> = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
         <div className="flex">
           <div className="flex-1 crad-left m-4 overflow-hidden">
             <h4 className="text-base font-bold p-2 xs:text-center">入学诊断</h4>
             <p className="p-2 text-white lg:text-xl font-bold xs:text-xs">
               有哪些国际化学校？需要什么入学条件？快速找到适合孩子的学校.。
-            </p>
-            <p className="p-2 text-white lg:text-xl font-bold xs:text-xs">
-              国际化学校通常在学术上提供多样化和国际化的课程，帮助孩子在全球化环境中更具竞争力。在文化适应方面，它们能帮助孩子更好地理解和融入不同的文化。而在语言能力方面，孩子通常能接触到多种语言，从而提升其语言技能。总的来说，这些学校为孩子提供了一个多元化的教育环境。
             </p>
           </div>
           <div className="flex-1 crad-right m-4 ">

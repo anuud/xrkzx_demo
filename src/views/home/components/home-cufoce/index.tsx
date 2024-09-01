@@ -3,6 +3,7 @@ import type { ReactNode, FC } from 'react';
 import { HomeFocusWrapper } from './styled';
 import { RightOutlined } from '@ant-design/icons';
 import { nanoid } from 'nanoid';
+import ChannelTit from '../../../../components/channel-tit';
 interface IProps {
   children?: ReactNode;
 }
@@ -27,8 +28,9 @@ const foucus = [
 const HomeFocus: FC<IProps> = () => {
   return (
     <HomeFocusWrapper>
-      <div className="lg:w-[1100px] xs:w-[100%] m-auto">
-        <div className="flex justify-between px-6">
+      <div className="lg:w-[1210px] xs:w-[100%] m-auto p-[10px] bg-white">
+        <ChannelTit text="校园资讯" />
+        {/* <div className="flex justify-between px-6">
           <div className="left">
             <img src={require('../../../../assets/images/home/see_logo.png')} alt="" />
           </div>
@@ -36,8 +38,8 @@ const HomeFocus: FC<IProps> = () => {
             更多
             <RightOutlined />
           </div>
-        </div>
-        <div className="w-full ">
+        </div> */}
+        <div className="w-full mt-2">
           {foucus.map((item) => {
             return (
               <div key={item._id} className="flex w-full h-[240px] item p-2">

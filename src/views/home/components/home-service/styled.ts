@@ -1,58 +1,15 @@
 import styled from 'styled-components';
 
 export const HomeServiceWrapper = styled.div`
-  padding-top: 10px;
-  margin-top: 20px;
-
-  .wrap {
-    background-image: url(${require('../../../../assets/images/index7.jpg')});
-  }
-  .card {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #f3f3f3;
-    margin-top: 10px;
-
-    .item {
-      width: 23%;
-      height: 200px;
-      border: solid 1px rgba(255, 255, 255, 0.3);
-      margin: 5px 5px;
-      position: relative;
-
-      .item-list {
-        position: absolute;
-        width: 100%;
-        .title {
-          font-size: 16px;
-          height: 50px;
-          line-height: 50px;
-        }
-        .text {
-          font-size: 13px;
-          height: 50px;
-          line-height: 50px;
-        }
-        .img > img {
-          margin: 0 auto;
-        }
-      }
-      .desc {
-        display: none;
-      }
-    }
-    .item:hover .desc {
-      display: block;
-      padding: 20px;
-      height: 198px;
-      line-height: 20px;
-      background-color: #d18925;
-      border: 1px solid #f3f3f3;
-      transition: all 0.5s;
-      /* opacity: 0; */
-    }
+  width: 1210px;
+  margin: auto;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: white;
+  .clearfix-tit {
+    background-color: #bdb76b;
+    height: 54px;
+    border-bottom: 2px solid #eee;
+    zoom: 1;
   }
 `;

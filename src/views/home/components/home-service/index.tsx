@@ -1,44 +1,54 @@
 import React from 'react';
 import type { ReactNode, FC } from 'react';
 import { HomeServiceWrapper } from './styled';
-import AreaCaption from '../../../../components/area-caption';
+import ChannelTit from '../../../../components/channel-tit';
 interface IProps {
   children?: ReactNode;
 }
+const list = [
+  {
+    id: '01',
+    text: '学生水平评估',
+    content: '评估测试 （数学+英语），科学评估孩子真实能力与潜力，快速锁定择校范围',
+    image: require('../../../../assets/images/home/2016110702.png')
+  },
+  {
+    id: '02',
+    text: ' 目标学校规划',
+    content: '导师1V1规划，提供国际课程及国际学校定位及建议 ；规划导师给予择校规划方案 ',
+    image: require('../../../../assets/images/home/2016110703.png')
+  },
+  {
+    id: '03',
+    text: '预约参观学校',
+    content: '校方招生官带领参观校园了解考情；规划导师协助申请报名与入学考试',
+    image: require('../../../../assets/images/home/2016110704.png')
+  },
+  {
+    id: '04',
+    text: '录取后续服务',
+    content: 'Offer选择与分析、入学准备与适应期咨询及支持',
+    image: require('../../../../assets/images/home/2016110707.png')
+  }
+];
 const HomeService: FC<IProps> = () => {
-  // const { waiterlist } = useAppSelector(
-  //   (state) => ({
-  //     waiterlist: state.homelist.waiterlist
-  //   }),
-  //   shallowEqual
-  // );
-
   return (
     <HomeServiceWrapper>
-      <div className="w-4/5 m-auto wrap pt-2">
-        <AreaCaption text="SERVICE" page="留学多对一服务流程" />
-      </div>
-      <div className="w-4/5 m-auto wrap pt-2 pb-5 mb-5">
-        {/* <div className="card">
-          {waiterlist?.map((item) => {
-            return (
-              <div className="item" key={item._id}>
-                <div className="item-list">
-                  <div className="title">- {item._id} -</div>
-                  <div className="img ">
-                    <img src={item.image_url} alt="" />
-                  </div>
-                  <div className="text">
-                    <p>{item.name}</p>
-                  </div>
-                </div>
-                <div className="desc">
-                  <p>{item.text}</p>
-                </div>
+      <ChannelTit text="课程服务" />
+      <div className="flex bg-white py-5 flex-wrap">
+        {list.map((item) => {
+          return (
+            <div key={item.id} className="item w-[49.5%] px-10 py-4">
+              <div className="flex justify-center items-center">
+                <img src={item.image} alt="" />
               </div>
-            );
-          })}
-        </div> */}
+              <div className="text">
+                <div className="text-center text-xl font-bold">{item.text}</div>
+                <div className="text-center w-[282px] m-auto">{item.content}</div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </HomeServiceWrapper>
   );

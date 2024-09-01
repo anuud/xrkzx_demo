@@ -13,3 +13,9 @@ export function getstytem(stystem = '老牌学校') {
     }
   });
 }
+
+export function getSchool() {
+  return hRequest.get({
+    url: `/school`
+  });
+}
