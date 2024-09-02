@@ -4,8 +4,8 @@ import { MediaStrategyWrapper } from './styled';
 import Caption from '../caption';
 import { strategy_media } from '../../../../assets/data/strategy-media';
 import { strategy_banner } from '../../../../assets/data/strategy-banner';
-import { RightOutlined, UserOutlined, WhatsAppOutlined } from '@ant-design/icons';
-import { Carousel, Form, Input } from 'antd';
+import { RightOutlined } from '@ant-design/icons';
+import { Carousel } from 'antd';
 interface IProps {
   children?: ReactNode;
 }
@@ -76,7 +76,7 @@ const MediaStrategy: FC<IProps> = () => {
             })}
           </Carousel>
         </div>
-        <div className="m-footer">
+        {/* <div className="m-footer">
           <div className=" relative text-base font-bold text-white">
             <h6 className="text-center">
               免费预约参加 <br />
@@ -108,7 +108,7 @@ const MediaStrategy: FC<IProps> = () => {
               </Form.Item>
             </Form>
           </div>
-        </div>
+        </div> */}
       </div>
     </MediaStrategyWrapper>
   );

@@ -55,6 +55,14 @@ const course = [
   {
     _id: nanoid(),
     name: 'IB课程'
+  },
+  {
+    _id: nanoid(),
+    name: 'IG课程'
+  },
+  {
+    _id: nanoid(),
+    name: 'OSSD课程'
   }
 ];
 const place = [
@@ -81,6 +89,18 @@ const place = [
   {
     _id: nanoid(),
     name: '龙华区'
+  },
+  {
+    _id: nanoid(),
+    name: '坪山区'
+  },
+  {
+    _id: nanoid(),
+    name: '盐田区'
+  },
+  {
+    _id: nanoid(),
+    name: '大鹏区'
   }
 ];
 const AcdemySelect: FC<IProps> = () => {

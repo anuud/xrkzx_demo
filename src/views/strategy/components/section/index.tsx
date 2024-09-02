@@ -43,7 +43,7 @@ const SectionStrategy: FC<IProps> = () => {
           </ul>
         </div>
         <div className="first2_sec mt-10 m-1">
-          <h5>如何获得深圳国际部录取名额？</h5>
+          <h5>深圳百所私立国际学校如何选择？</h5>
           <ul>
             <li>
               <a

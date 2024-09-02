@@ -10,7 +10,7 @@ const AreaHeader: FC<IProps> = (props) => {
   return (
     <AreaHeaderWrapper>
       <h2 className="block text-3xl w-full text-center font-black mt-8 mb-8">{props.topheader}</h2>
-      <p className="block text-base w-full text-center leading-8  mb-6">{props.abstract}</p>
+      <p className="block text-xl font-bold w-full text-center leading-8  mb-6">{props.abstract}</p>
     </AreaHeaderWrapper>
   );
 };

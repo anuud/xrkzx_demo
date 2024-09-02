@@ -5,11 +5,14 @@ import { SunflowerSchoolwrapper } from './styled';
 import { useAppDispatch, useAppSelector } from '../../../../store';
 import { shallowEqual } from 'react-redux';
 import { fetchHomeDataAction } from '../../../home/store/home';
+import { useNavigate } from 'react-router-dom';
 interface IProps {
   children?: ReactNode;
 }
 const SunflowerSchool: FC<IProps> = () => {
   const dispatch = useAppDispatch();
+  const navgite = useNavigate();
+
   const { schoollist } = useAppSelector(
     (state) => ({
       schoollist: state.homelist.schoollist
@@ -25,8 +28,12 @@ const SunflowerSchool: FC<IProps> = () => {
       <div className="flex flex-wrap w-[80%] m-auto">
         {schoollist?.slice(0, 10).map((item) => {
           return (
-            <div key={item.id} className=" py-4 w-[19.3%] bg-white m-1">
-              <img src={item.school_icon} alt="" className="w-[390px] h-[178px] p-1" />
+            <div
+              key={item.id}
+              className=" py-4 lg:w-[19%] bg-white m-1"
+              onClick={() => navgite(`/school/${item.id}`)}
+            >
+              <img src={item.school_icon} alt="" className="w-[100%] h-[178px] p-1" />
               <div className="ml-3 text-black text-sm font-bold text-center h-[40px] ">
                 {item.name}
               </div>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MediaStrategyWrapper = styled.div`
   width: 100%;
-  height: 150vh;
+  height: 120vh;
   margin: 0 auto;
   background: url(${require('../../../../assets/images/picture/last_bg.jpg')}) top center no-repeat;
   background-size: 100% 100%;

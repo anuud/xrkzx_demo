@@ -19,15 +19,15 @@ const SunFlower: FC<IProps> = () => {
           <SunflowerCard />
           <div>
             <SunflowerTitle title="找国际化学校问小葵" />
-            <div className="lg:w-[80%] m-auto ">
+            <div className="lg:w-[80%] m-auto font-bold">
               <div className="flex">
-                <div className="lay flex-1">
+                <div className="lay flex-1 mr-2">
                   <div className="stop">
-                    <div className="flex mb-5">
+                    <div className="flex mb-5 justify-center items-center">
                       <div className="top-avatar bg-blue-400 rounded-full mr-3"></div>
-                      <div className=" font-bold pt-2">
-                        <span className="text-sm text-black">向日葵择校-</span>
-                        <span className="text-sm text-blue-500">小葵</span>
+                      <div className=" font-bold pt-2 flex justify-center items-center text-xl">
+                        <span className=" text-black">向日葵择校-</span>
+                        <span className="text- text-blue-500">小葵</span>
                       </div>
                     </div>
                     <div className="m-6 onOne">
@@ -37,7 +37,9 @@ const SunFlower: FC<IProps> = () => {
                           alt=""
                           className="w-[25px] h-[25px]"
                         />
-                        <span className="leading-5 ml-2">1v1专属择校顾问，超级宠粉有问必答</span>
+                        <span className="leading-5 text-base ml-2">
+                          1v1专属择校顾问，超级宠粉有问必答
+                        </span>
                       </div>
                       <div className="flex mt-1">
                         <img
@@ -45,7 +47,9 @@ const SunFlower: FC<IProps> = () => {
                           alt=""
                           className="w-[25px] h-[25px]"
                         />
-                        <span className="leading-8 ml-2">访遍本土国际化学校，熟知学校内部开设</span>
+                        <span className="leading-8 text-base ml-2">
+                          访遍本土国际化学校，熟知学校内部开设
+                        </span>
                       </div>
                     </div>
                     <div className="w-[50%] m-auto pb-4">
@@ -67,7 +71,7 @@ const SunFlower: FC<IProps> = () => {
                       </Space>
                     </div>
                   </div>
-                  <div className="boottom">
+                  <div className="boottom text-base">
                     <div>
                       <span>精准择校：</span>
                       <span>擅长根据学生综合情况，快速匹配3-5所</span>
@@ -90,15 +94,14 @@ const SunFlower: FC<IProps> = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-[35%]">
+                <div className="w-[35%] border">
                   <img
                     src={require('../../assets/images/sunflower/65107.jpg')}
                     alt=""
-                    className=""
+                    className="h-full"
                   />
                 </div>
               </div>
-
               <div>
                 <div className="flex items-center justify-center">
                   <div className="line-l"></div>

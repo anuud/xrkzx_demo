@@ -36,23 +36,12 @@ const Promote: FC<IProps> = () => {
           双语/DSE/外籍等国际话学校入学有哪些门槛
         </div>
         <div className="flex flex-wrap">
-          <img
-            src={require('../../assets/images/promote/course_2.png')}
-            alt=""
-            className="m-auto"
-          />
-          <img
-            src={require('../../assets/images/promote/course_3.png')}
-            alt=""
-            className="m-auto"
-          />
+          <img src={require('../../assets/images/promote/course_2.png')} className="lg:w-[50%]" />
+          <img src={require('../../assets/images/promote/course_3.png')} className="lg:w-[50%]" />
         </div>
-        <div>
-          <img
-            src={require('../../assets/images/promote/course_4.a3NJZ1Hf.png')}
-            alt=""
-            className="m-auto"
-          />
+        <div className="flex flex-wrap">
+          <img src={require('../../assets/images/promote/jihua.png')} className="m-auto p-3" />
+          <img src={require('../../assets/images/promote/course_4.a3NJZ1Hf.png')} />
         </div>
       </div>
       <div className="flex flex-wrap">

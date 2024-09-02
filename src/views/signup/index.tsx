@@ -130,14 +130,14 @@ const Signup: FC<IProps> = () => {
           <h4 className="text-center text-sm py-1">累计以帮助10000+位学生进入目标学校</h4>
           <img src={require('../../assets/images/baoming/dibu.jpg')} alt="" />
         </div> */}
-        <div className="footer">
+        {/* <div className="footer">
           <ul className="flex justify-center text-gray-400">
             <li className="p-1">择校计划 |</li>
             <li className="p-1">国际学校 |</li>
             <li className="p-1">联系我们</li>
           </ul>
           <div className="text-center text-gray-400">向日葵择校平台</div>
-        </div>
+        </div> */}
       </div>
     </SignupWrapper>
   );

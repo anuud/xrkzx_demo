@@ -12,7 +12,7 @@ export const SunFlowerWrapper = styled.div`
   }
   .lay {
     background: linear-gradient(1turn, #93b6ff, #3978ff);
-    border-radius: 8px;
+    /* border-radius: 8px; */
     padding: 24px 16px;
     .stop {
       background-color: white;
@@ -37,7 +37,7 @@ export const SunFlowerWrapper = styled.div`
       background-size: 100% 100%;
       border: 1px solid #dce7ff;
       height: 58px;
-      margin-top: -14px;
+      margin-top: 15px;
       width: 58px;
     }
   }

@@ -40,7 +40,7 @@ const Detail: FC<IProps> = () => {
           return (
             <div key={item.name}>
               <div
-                className="detail-banner flex justify-center items-center text-center text-2xl text-white font-bold"
+                className="detail-banner flex justify-center items-center text-center text-5xl text-black font-bold"
                 style={{
                   backgroundImage: `url(${item?.campus[0].shool_image}) `,
                   width: '100%',

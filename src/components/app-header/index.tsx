@@ -39,7 +39,7 @@ const AppHeader: FC<IProps> = () => {
       {locations.pathname === '/home' && (
         <div className="w-full m-auto" ref={domRef} onClick={() => navgite('/signup')}>
           <img
-            src={require('../../assets/images/home/nav.png')}
+            src={require('../../assets/images/nav.png')}
             alt=""
             className="w-full lg:h-[100px] xs:h-[40px]"
           />

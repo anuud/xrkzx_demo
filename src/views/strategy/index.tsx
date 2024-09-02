@@ -7,8 +7,8 @@ import TabbelStrategy from './components/tabbel';
 import ClassFy from './components/classify';
 import Atlas from './components/atlas';
 import Course from './components/course';
-import SerVce from './components/servce';
-import TheCher from './components/thecher';
+// import SerVce from './components/servce';
+// import TheCher from './components/thecher';
 import SchoolStrategy from './components/school';
 import MediaStrategy from './components/media';
 interface IProps {
@@ -24,8 +24,8 @@ const Strategy: FC<IProps> = () => {
         <TabbelStrategy />
         <ClassFy />
         <Course />
-        <SerVce />
-        <TheCher />
+        {/* <SerVce /> */}
+        {/* <TheCher /> */}
         <SchoolStrategy />
         <MediaStrategy />
       </div>

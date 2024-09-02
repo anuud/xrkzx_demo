@@ -98,7 +98,7 @@ const HomeCard: FC<IProps> = () => {
               <p> 英语口语(日常口语/面试口语 )</p>
               <p> 英语基础(语法/词汇/语音语调/精听精读)</p>
             </div>
-            <a onClick={() => setVisible(true)}>获取备考计划</a>
+            <a onClick={() => setVisible(true)}>获取英语备考计划</a>
           </li>
           <li>
             <div className="item2">语言考试类培训</div>
@@ -107,7 +107,7 @@ const HomeCard: FC<IProps> = () => {
               <p> SAT/GRE/GMAT/TOEFL Junior/SSAT/AEAS</p>
               <p> 国际学校入学备考考试(英语/数学)</p>
             </div>
-            <a onClick={() => setVisible(true)}>获取备考计划</a>
+            <a onClick={() => setVisible(true)}>获取语言备考计划</a>
           </li>
           <li>
             <div className="item3">国内考试类培训</div>
@@ -126,7 +126,7 @@ const HomeCard: FC<IProps> = () => {
               <p> DSE:语文/数学/英语/公民与社会发展/数学延伸/物理/化学/生物/地理/经济</p>
               <p>AP:微积分AB/微积分BC/统计学/物理/化学/生物/心理学/ 美国历史</p>
             </div>
-            <a onClick={() => setVisible(true)}>获取备考计划</a>
+            <a onClick={() => setVisible(true)}>获取国际课程备考计划</a>
           </li>
         </ul>
       </div>
